@@ -1,0 +1,89 @@
+.previews {
+    background-color: none !important;
+    border: lem solid green;
+}
+
+.hook {
+    background-color: purple;
+    border: 3px solid yellow;
+    animation-name: hookanimate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.creditcard {
+    background-color: yellow;
+    border: 15px solid black;
+
+    animation-name: credit;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+}
+
+div.accountintro {
+    background-color: white;
+    border: none !important;
+    display: grid;
+    height: 200px;
+    width: 200px;
+}
+
+body.storefront {
+    background-image: url("background/swamp.jpg");
+}
+
+body.account {
+    background-image: url("background/lake.jpg");
+}
+
+body.viewcredit {
+    background-image: url("background/grasssand.jpg")
+}
+
+.wood {
+    opacity: 1;
+    display: block;
+    width: auto;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.wood:hover {
+    opacity: .8;
+    transform: scale(1.5);
+}
+
+/*These keyframes create animation without using javascript
+*/
+@keyframes credit {
+    from {
+        background-color: rgb(255, 255, 181);
+    }
+
+    to {
+        background-color: rgb(252, 252, 0);
+    }
+
+    from {
+        background-color: rgb(252, 252, 0);
+    }
+
+    to {
+        background-color: rgb(255, 255, 181);
+    }
+
+}
+
+@keyframes hookanimate {
+    from {
+        background-color: rgb(235, 25, 235)
+    }
+
+    to {
+        background-color: yellow
+    }
+}
+
+/* This adjust the height of nav bar*/

@@ -2,10 +2,11 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="storestyle.css">
+
 </head>
 
-<body>
+<body class="storefront">
 
     <table background="toys/deadpoolpikachu.JPG" width="70%" height="100" align="center">
         <tr>
@@ -18,19 +19,22 @@
                     <option value="toys" onclick="window.location.href='toys.html'">Anime Figurines</option>
 
                 </select></th>
+            <div class="woodbar">
+                <th scope="col"><a href="index.html"><img src="woodbar/home.jpg" class="wood"></th>
+                <div class="wrap">
+                    <th scope="col">
+                        <div class="search">
+                    <th scope="col"><input type="text" class="searchTerm" placeholder="What are you looking for?">
 
-            <th scope="col"><a href="index.html"><input type="button" value="Home"></th>
-            <div class="wrap">
-                <th scope="col">
-                    <div class="search">
-                <th scope="col"><input type="text" class="searchTerm" placeholder="What are you looking for?">
-
-                    <button type="submit" class="searchButton"><i class="fa fa-search">Search</i></th>
-                </button>
+                        <button type="submit" class="searchButton"><i class="fa fa-search">Search</i></th>
+                    </button>
+                </div>
+            </div>
+            <div class="woodbar">
+                <th scope="col"><a href="account.html"><img src="woodbar/account.jpg" class="wood"></th>
+                <th scope="col"><a href="products/empty.html"><img src="woodbar/cart.jpg" class="wood"></th>
             </div>
             </div>
-            <th scope="col"><a href="account.html"><input type="button" value="Account"></th>
-            <th scope="col"><a href="products/empty.html"><input type="button" value="Cart"></th>
 
         </tr>
     </table>
