@@ -6,39 +6,41 @@
 </head>
 
 <body>
-    <table background="toys/deadpoolpikachu.JPG" width="70%" height="100" align="center">
-        <tr>
-            <label for="category"></label>
+    <div class="backgroundanimate">
+        <table background="toys/deadpoolpikachu.JPG" width="70%" height="100" align="center">
+            <tr>
+                <label for="category"></label>
 
-            <th scope="col"><select id="category">
-                    <option value="">--Choose a category--</option>
-                    <option value="Textbooks" onclick="window.location.href='textbooks.html'">Textbooks</option>
-                    <option value="Manga" onclick="window.location.href='manga.html'">Manga</option>
-                    <option value="toys" onclick="window.location.href='toys.html'">Anime Figurines</option>
+                <th scope="col"><select id="category">
+                        <option value="">--Choose a category--</option>
+                        <option value="Textbooks" onclick="window.location.href='textbooks.html'">Textbooks</option>
+                        <option value="Manga" onclick="window.location.href='manga.html'">Manga</option>
+                        <option value="toys" onclick="window.location.href='toys.html'">Anime Figurines</option>
 
-                </select></th>
+                    </select></th>
 
-            <th scope="col"><a href="index.html"><img src="woodbar/home.jpg" class="wood"></th>
-            <div class="wrap">
-                <th scope="col">
-                    <div class="search">
-                <th scope="col"><input type="text" class="searchTerm" placeholder="What are you looking for?">
+                <th scope="col"><a href="index.html"><img src="woodbar/home.jpg" class="wood"></th>
+                <div class="wrap">
+                    <th scope="col">
+                        <div class="search">
+                    <th scope="col"><input type="text" class="searchTerm" placeholder="What are you looking for?">
 
-                    <button type="submit" class="searchButton"><i class="fa fa-search">Search</i></th>
-                </button>
-            </div>
-            </div>
-            <th scope="col"><a href="account.html"><img src="woodbar/account.jpg" class="wood"></th>
-            <th scope="col"><a href="products/empty.html"><img src="woodbar/cart.jpg" class="wood"></th>
+                        <button type="submit" class="searchButton"><i class="fa fa-search">Search</i></th>
+                    </button>
+                </div>
+    </div>
+    <th scope="col"><a href="account.html"><img src="woodbar/account.jpg" class="wood"></th>
+    <th scope="col"><a href="products/empty.html"><img src="woodbar/cart.jpg" class="wood"></th>
 
 
-        </tr>
+    </tr>
     </table>
-    <p>
-        <h1>Company Info</h1>
-    </p>
-
-    <fieldset>
+    <div class="companyinfobox">
+        <p>
+            <h1>Company Info</h1>
+        </p>
+    </div>
+    <fieldset class="companyinfobox">
         <table width="40%">
             <tr>
                 <th>Year Founded </th>
@@ -58,9 +60,10 @@
             </tr>
         </table>
     </fieldset>
-
-    <fieldset>Still need help? Contact Info: I can't give emails right or contact info.</fieldset>
-
+    <div class="companyinfobox">
+        <fieldset>Still need help? Contact Info: I can't give emails right or contact info.</fieldset>
+    </div>
+    </div>
 </body>
 
 </html>

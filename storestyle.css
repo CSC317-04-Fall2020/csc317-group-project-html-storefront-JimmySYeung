@@ -3,12 +3,21 @@
     border: lem solid green;
 }
 
+.backgroundanimate {
+    animation-name: backgroundchange;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
 .hook {
     background-color: purple;
     border: 3px solid yellow;
+
     animation-name: hookanimate;
     animation-duration: 5s;
     animation-iteration-count: infinite;
+    width: 300px;
+
 }
 
 .creditcard {
@@ -21,12 +30,26 @@
 
 }
 
-div.accountintro {
+.accountintro {
     background-color: white;
     border: none !important;
     display: grid;
     height: 200px;
     width: 200px;
+}
+
+.companyinfobox {
+    background-color: white;
+    border: solid black;
+    display: grid;
+    width: 600px;
+}
+
+.faqinfobox {
+    background-color: white;
+    border: solid purple;
+    display: grid;
+    width: 500;
 }
 
 body.storefront {
@@ -50,9 +73,19 @@ body.viewcredit {
     backface-visibility: hidden;
 }
 
+.accountbutton {
+    opacity: .7;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
 .wood:hover {
     opacity: .8;
     transform: scale(1.5);
+}
+
+.accountbutton:hover {
+    opacity: 1;
 }
 
 /*These keyframes create animation without using javascript
@@ -83,6 +116,20 @@ body.viewcredit {
 
     to {
         background-color: yellow
+    }
+}
+
+@keyframes backgroundchange {
+    from {
+        background-image: url("background/deadleave.jpg")
+    }
+
+    to {
+        background-image: url("background/grasssand.jpg")
+    }
+
+    to {
+        background-image: url("background/lake.jpg")
     }
 }
 
