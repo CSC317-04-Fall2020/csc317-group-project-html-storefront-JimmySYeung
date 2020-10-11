@@ -3,9 +3,19 @@
     border: lem solid green;
 }
 
-.backgroundanimate {
-    animation-name: backgroundchange;
+.backgroundads {
+    animation-name: adschange;
     animation-duration: 6s;
+    width: 309px;
+    height: 479px;
+    animation-iteration-count: infinite;
+}
+
+.backgroundads1 {
+    animation-name: adschange1;
+    animation-duration: 6s;
+    width: 309px;
+    height: 479px;
     animation-iteration-count: infinite;
 }
 
@@ -174,7 +184,7 @@ body.login-help {
         background-color: rgb(252, 252, 0);
     }
 
-    from {
+    to {
         background-color: rgb(252, 252, 0);
     }
 
@@ -194,17 +204,23 @@ body.login-help {
     }
 }
 
-@keyframes backgroundchange {
+@keyframes adschange {
     from {
-        background-image: url("background/deadleave.jpg")
+        background-image: url("books/AmericanDream.jpg");
     }
 
     to {
-        background-image: url("background/grasssand.jpg")
+        background-image: url("books/heroacademiavol1.jpg");
+    }
+}
+
+@keyframes adschange1 {
+    from {
+        background-image: url("books/introtojava.jpg");
     }
 
     to {
-        background-image: url("background/lake.jpg")
+        background-image: url("books/python.jpg");
     }
 }
 
