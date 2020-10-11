@@ -9,6 +9,16 @@
     animation-iteration-count: infinite;
 }
 
+.companyinfo {
+    background-image: url("background/lake.jpg");
+    color: white;
+}
+
+.faq {
+    background-image: url("background/greysand.jpg");
+    color: white;
+}
+
 .hook {
     background-color: purple;
     border: 3px solid yellow;
@@ -39,16 +49,14 @@
 }
 
 .companyinfobox {
-    background-color: white;
+    background-image: url("woodbar/redwoodnavbar.jpg");
     border: solid black;
     display: grid;
     width: 600px;
 }
 
 .faqinfobox {
-    background-color: white;
-    border: solid purple;
-    display: grid;
+    background-image: url("background/grasssand.jpg");
     width: 500;
 }
 
@@ -56,8 +64,19 @@ body.storefront {
     background-image: url("background/swamp.jpg");
 }
 
+.products {
+    background-image: url("woodbar/redwoodnavbar.jpg");
+    color: white;
+}
+
+.addCart {
+    background-image: url("products/productpartofpage/addtocart.jpg");
+    width: 125px;
+    height: 42px;
+}
+
 body.account {
-    background-image: url("background/lake.jpg");
+    background-image: url("background/poolofwater.jpg");
 }
 
 body.viewcredit {
@@ -65,12 +84,20 @@ body.viewcredit {
 }
 
 .login {
-    background-image: url("background/grasssand.jpg")
+    background-image: url("background/grasssand.jpg");
+    color: white;
+}
+
+body.login-help {
+    background-image: url("background/greysand.jpg");
+    color: white;
 }
 
 .redwoodbg {
     background-image: url("woodbar/redwoodnavbar.jpg")
 }
+
+
 
 .wood {
     opacity: 1;
@@ -86,6 +113,18 @@ body.viewcredit {
     display: block;
     width: auto;
     height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.accountredwood {
+    opacity: .7;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.accountredwood {
+    opacity: .7;
     transition: .5s ease;
     backface-visibility: hidden;
 }
@@ -110,6 +149,10 @@ body.viewcredit {
 .redwood:hover {
     opacity: .6;
 
+}
+
+.accountredwood:hover {
+    opacity: 1;
 }
 
 .accountbutton:hover {
