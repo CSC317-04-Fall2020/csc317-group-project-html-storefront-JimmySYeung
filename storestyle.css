@@ -79,12 +79,22 @@ body.viewcredit {
     backface-visibility: hidden;
 }
 
+.productvisible {
+    opacity: .7;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
 .wood:hover {
     opacity: .8;
     transform: scale(1.5);
 }
 
 .accountbutton:hover {
+    opacity: 1;
+}
+
+.productvisible:hover {
     opacity: 1;
 }
 
