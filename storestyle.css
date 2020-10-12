@@ -225,3 +225,82 @@ body.login-help {
 }
 
 /* This adjust the height of nav bar*/
+
+.productpage{
+    display: grid;
+    width: 80%;
+    height: 100%;
+    grid-template-columns:2fr 1fr 1fr;
+    grid-template-rows: 1fr 6fr 1fr;
+    margin-left: 10%;
+}
+
+.producttitle{
+    align-self: center;
+    justify-self: center;
+    grid-area: 1/1/2/2;
+}
+
+.productimg{
+    grid-area: 2/1/4/2;
+    width: 100%;
+}
+
+.productdescription{
+    grid-area: 1/2/3/4;
+    font-size: 20px;
+    padding: 50px;
+}
+
+.productprice{
+    align-self: center;
+    justify-self: center;
+    grid-area: 3/2/4/3;
+}
+
+.productcart{
+    align-self: center;
+    justify-self: center;
+    grid-area: 3/3/4/4;
+}
+
+.productscroll {
+    display: flex;
+    flex-flow: row;
+    overflow: auto;
+    width: 80%;
+    max-height: 300px;
+    margin-left: 10%;
+    background-color: white;
+}
+
+.productpreview {
+    display: grid;
+    grid-template-columns:250px;
+    grid-template-rows: 200px 15px 15px;
+    padding: 1%;
+    border: solid black 5px;
+    margin: 0;
+}
+
+.productpreviewimg {
+    width: 250px;
+    height: 90%;
+    margin: 0;
+    border: 0;
+}
+
+.productpreviewtext {
+    justify-self: center;
+    align-self: center;
+    color: black;
+    font-size: 15px;
+    margin: 0;
+    border: 0;
+}
+
+.productlink{
+    text-decoration: none;
+    margin: 0;
+    border: 0;
+}
