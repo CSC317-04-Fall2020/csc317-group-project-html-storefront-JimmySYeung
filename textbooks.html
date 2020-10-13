@@ -11,14 +11,16 @@
         <tr>
             <label for="category"></label>
 
-            <th scope="col"><select id="category">
-                    <option value="">--Choose a category--</option>
-                    <option value="Textbooks" onclick="window.location.href='textbooks.html'">Textbooks</option>
-                    <option value="Manga" onclick=" window.location.href='manga.html'">Manga</option>
-                    <option value="Anime Figurines" onclick="window.location.href='toys.html'">Anime Figurines
-                    </option>
-
-                </select></th>
+            <th scope="col">
+                <div class="dropdown">
+                    <button class="dropbtn">Select a category</button>
+                    <div class="dropdown-content">
+                        <a href="textbooks.html">Textbooks</a>
+                        <a href="manga.html">Manga</a>
+                        <a href="toys.html">Anime Figurines</a>
+                    </div>
+                </div>
+            </th>
 
             <th scope="col"><a href="index.html"><img src="woodbar/home.jpg" class="wood"></th>
             <div class="wrap">

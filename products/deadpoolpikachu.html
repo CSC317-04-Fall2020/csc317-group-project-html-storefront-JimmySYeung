@@ -14,14 +14,16 @@
         <tr>
             <label for="category"></label>
 
-            <th scope="col"><select id="category">
-                    <option value="">--Choose a category--</option>
-                    <option value="Textbooks" onclick="window.location.href='../textbooks.html'">
-                        Textbooks</option>
-                    <option value="Manga" onclick="window.location.href='../manga.html'">Manga</option>
-                    <option value="toys" onclick="window.location.href='../toys.html'">Anime Figurines
-                    </option>
-                </select></th>
+            <th scope="col">
+                <div class="dropdown">
+                    <button class="dropbtn">Select a category</button>
+                    <div class="dropdown-content">
+                        <a href="../textbooks.html">Textbooks</a>
+                        <a href="../manga.html">Manga</a>
+                        <a href="../toys.html">Anime Figurines</a>
+                    </div>
+                </div>
+            </th>
 
             <th scope="col"><a href="../index.html"><img src="../woodbar/home.jpg" class="wood"></th>
             <div class="wrap">
@@ -29,7 +31,7 @@
                     <div class="search">
                 <th scope="col"><input type="text" class="searchTerm" placeholder="What are you looking for?">
 
-                    <button type="submit" class="searchButton"><i class="fa fa-search"></i></th>
+                    <button type="submit" class="searchButton"><i class="fa fa-search">Search</i></th>
                 </button>
             </div>
             </div>
