@@ -9,6 +9,27 @@
     height: 30px;
 }
 
+
+/* These changes the categories setting*/
+label {
+    font-family: sans-serif;
+    font-size: 2rem;
+    padding-right: 20px;
+}
+
+select {
+    font-size: 1rem;
+    padding: 4px 10px;
+    background-image: url("woodbar/navbar.jpg");
+    color: purple;
+}
+
+
+option {
+    background-image: url("woodbar/navbar.jpg");
+
+}
+
 .empty {
     background-image: url("background/beachsand.jpg");
 }
