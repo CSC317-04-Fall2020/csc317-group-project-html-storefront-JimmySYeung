@@ -3,6 +3,16 @@
     border: lem solid green;
 }
 
+.searchButton {
+    background-image: url("woodbar/search.jpg");
+    width: 110px;
+    height: 30px;
+}
+
+.empty {
+    background-image: url("background/beachsand.jpg");
+}
+
 .backgroundads {
     animation-name: adschange;
     animation-duration: 6s;
@@ -85,6 +95,8 @@ body.storefront {
     height: 50px;
 }
 
+
+
 body.account {
     background-image: url("background/poolofwater.jpg");
 }
@@ -106,8 +118,6 @@ body.login-help {
 .redwoodbg {
     background-image: url("woodbar/redwoodnavbar.jpg")
 }
-
-
 
 .wood {
     opacity: 1;
@@ -226,39 +236,39 @@ body.login-help {
 
 /* This adjust the height of nav bar*/
 
-.productpage{
+.productpage {
     display: grid;
     width: 80%;
     height: 100%;
-    grid-template-columns:2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: 1fr 6fr 1fr;
     margin-left: 10%;
 }
 
-.producttitle{
+.producttitle {
     align-self: center;
     justify-self: center;
     grid-area: 1/1/2/2;
 }
 
-.productimg{
+.productimg {
     grid-area: 2/1/4/2;
     width: 100%;
 }
 
-.productdescription{
+.productdescription {
     grid-area: 1/2/3/4;
     font-size: 20px;
     padding: 50px;
 }
 
-.productprice{
+.productprice {
     align-self: center;
     justify-self: center;
     grid-area: 3/2/4/3;
 }
 
-.productcart{
+.productcart {
     align-self: center;
     justify-self: center;
     grid-area: 3/3/4/4;
@@ -276,7 +286,7 @@ body.login-help {
 
 .productpreview {
     display: grid;
-    grid-template-columns:250px;
+    grid-template-columns: 250px;
     grid-template-rows: 200px 15px 15px;
     padding: 1%;
     border: solid black 5px;
@@ -299,7 +309,7 @@ body.login-help {
     border: 0;
 }
 
-.productlink{
+.productlink {
     text-decoration: none;
     margin: 0;
     border: 0;
