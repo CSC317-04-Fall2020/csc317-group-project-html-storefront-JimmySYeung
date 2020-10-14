@@ -13,7 +13,10 @@
 /* These changes the categories setting*/
 
 .dropbtn {
+    /*
     background-color: #2a9c56;
+    */
+    background-image: url("woodbar/navbar.jpg");
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -28,7 +31,7 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-image: url("woodbar/whiteplank.jpg");
     min-width: 160px;
     z-index: 1;
 }
@@ -49,7 +52,10 @@
 }
 
 .dropdown:hover .dropbtn {
+    /*
     background-color: brown;
+    */
+    background-image: url("woodbar/redwoodnavbar.jpg");
 }
 
 .empty {
@@ -171,7 +177,7 @@ body.login-help {
     backface-visibility: hidden;
     margin-left: auto;
     margin-right: auto;
-    
+
 }
 
 .redwood {
