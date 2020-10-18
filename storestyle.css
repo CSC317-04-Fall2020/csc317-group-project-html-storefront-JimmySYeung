@@ -4,9 +4,11 @@
 }
 
 .searchButton {
+    position: relative;
     background-image: url("woodbar/search.jpg");
     width: 110px;
     height: 30px;
+    top: 7px;
 }
 
 
@@ -170,14 +172,20 @@ body.login-help {
 
 .wood {
     opacity: 1;
-    display: block;
     width: auto;
     height: auto;
     transition: .5s ease;
     backface-visibility: hidden;
     margin-left: auto;
     margin-right: auto;
+}
 
+.woodalign {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
 }
 
 .redwood {
@@ -185,12 +193,6 @@ body.login-help {
     display: block;
     width: auto;
     height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
-}
-
-.accountredwood {
-    opacity: .7;
     transition: .5s ease;
     backface-visibility: hidden;
 }
@@ -365,4 +367,39 @@ body.login-help {
     text-decoration: none;
     margin: 0;
     border: 0;
+}
+
+.productbackground{
+    display: grid;
+    width: 70%;
+    max-height: 500px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgb(221, 148, 52);
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    padding: 10px;
+}
+
+.productcell{
+    width: 100%;
+    height: 240px;
+}
+
+.categorybackground{
+    margin-left: 15%;
+    display: grid;
+    width: 70%;
+    max-height: 250px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: rgb(221, 148, 52);
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+.accountbackground {
+    background-image: url("woodbar/redwoodnavbar.jpg");
+    margin: auto;
+    width: 70%;
 }
