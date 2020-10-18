@@ -240,19 +240,23 @@ body.login-help {
 /*These keyframes create animation without using javascript
 */
 @keyframes credit {
-    from {
+
+    0% {
         background-color: rgb(255, 255, 181);
     }
 
-    to {
+
+
+    25% {
         background-color: rgb(252, 252, 0);
     }
 
-    to {
+
+    50% {
         background-color: rgb(252, 252, 0);
     }
 
-    to {
+    100% {
         background-color: rgb(255, 255, 181);
     }
 
@@ -268,23 +272,48 @@ body.login-help {
     }
 }
 
+/* These ads change affect the login and register's advertisement*/
 @keyframes adschange {
-    from {
+    0% {
         background-image: url("books/AmericanDream.jpg");
     }
 
-    to {
+    25% {
         background-image: url("books/heroacademiavol1.jpg");
+    }
+
+    50% {
+        background-image: url("books/introtojava.jpg")
+    }
+
+    75% {
+        background-image: url("books/websiteplayground.jpg")
+    }
+
+    100% {
+        background-image: url("books/AmericanDream.jpg");
     }
 }
 
 @keyframes adschange1 {
-    from {
+    0% {
         background-image: url("books/introtojava.jpg");
     }
 
-    to {
+    25% {
         background-image: url("books/python.jpg");
+    }
+
+    50% {
+        background-image: url("books/whitecollarcrimebook.jpg");
+    }
+
+    75% {
+        background-image: url("books/introtosociology.jpg");
+    }
+
+    100% {
+        background-image: url("books/introtophysicalanthropology.jpg");
     }
 }
 
@@ -369,7 +398,7 @@ body.login-help {
     border: 0;
 }
 
-.productbackground{
+.productbackground {
     display: grid;
     width: 70%;
     max-height: 500px;
@@ -381,12 +410,12 @@ body.login-help {
     padding: 10px;
 }
 
-.productcell{
+.productcell {
     width: 100%;
     height: 240px;
 }
 
-.categorybackground{
+.categorybackground {
     margin-left: 15%;
     display: grid;
     width: 70%;
