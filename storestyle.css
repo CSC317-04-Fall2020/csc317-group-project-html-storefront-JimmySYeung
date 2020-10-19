@@ -14,19 +14,6 @@
 
 /* These changes the categories setting*/
 
-@keyframes growDown {
-    0% {
-        transform: scaleY(0);
-    }
-
-    75% {
-        transform: scaleY(0.75);
-    }
-
-    100% {
-        transform: scaleY(1);
-    }
-}
 
 .dropbtn {
     /*
@@ -348,6 +335,21 @@ body.login-help {
     }
 }
 
+@keyframes growDown {
+    0% {
+        transform: scaleY(0);
+    }
+
+    75% {
+        transform: scaleY(0.75);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+
 /* This adjust the height of nav bar*/
 
 .productpage {
@@ -462,4 +464,10 @@ body.login-help {
     background-image: url("woodbar/redwoodnavbar.jpg");
     margin: auto;
     width: 70%;
+}
+
+.cart {
+    background-color: rgba(195,195,195, 0.9);
+    width: 80%;
+    margin: auto;
 }
