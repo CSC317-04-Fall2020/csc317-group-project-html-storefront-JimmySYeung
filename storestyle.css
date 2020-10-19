@@ -121,7 +121,6 @@
 
 .account-orders {
     background-color: rgba(195,195,195, 0.9);
-    background-o
 }
 
 .companyinfobox {
@@ -132,8 +131,9 @@
 }
 
 .faqinfobox {
-    background-image: url("background/grasssand.jpg");
-    width: 500;
+    background-color: rgb(105,67,35);
+    margin: auto;
+    width: 90%;
 }
 
 body.storefront {
