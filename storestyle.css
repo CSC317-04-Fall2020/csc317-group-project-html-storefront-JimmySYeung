@@ -119,6 +119,11 @@
     width: 400px;
 }
 
+.account-orders {
+    background-color: rgba(195,195,195, 0.9);
+    background-o
+}
+
 .companyinfobox {
     background-image: url("woodbar/redwoodnavbar.jpg");
     border: solid black;
