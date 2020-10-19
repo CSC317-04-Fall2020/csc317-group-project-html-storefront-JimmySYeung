@@ -41,7 +41,8 @@
 
 .dropdown {
     position: relative;
-    display: inline-block;
+    display: block;
+    z-index: 1;
 }
 
 .dropdown:hover {
