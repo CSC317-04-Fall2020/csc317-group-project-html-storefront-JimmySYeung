@@ -137,10 +137,10 @@
 }
 
 .companyinfobox {
-    background-image: url("woodbar/redwoodnavbar.jpg");
-    border: solid black;
-    display: grid;
-    width: 600px;
+    background-color: rgba(104,67,22, 0.9);
+    border: 3px;
+    margin: auto;
+    width: auto;
 }
 
 .faqinfobox {
