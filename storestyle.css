@@ -15,6 +15,7 @@
 
 /* These changes the categories setting*/
 
+
 .dropbtn {
     /*
     background-color: #2a9c56;
@@ -28,22 +29,34 @@
 
 .dropdown {
     position: relative;
-    display: inline-block;
+    display: block;
+    z-index: 1;
+}
+
+.dropdown:hover {
+    display: block;
 }
 
 .dropdown-content {
-    display: none;
     position: absolute;
     background-image: url("woodbar/whiteplank.jpg");
-    min-width: 160px;
-    z-index: 1;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    perspective: 1000px;
+    display: none;
+    transform-origin: top center;
+    animation: growDown 0.25s ease-in-out forwards
 }
+
+
 
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    height: auto;
 }
 
 .dropdown-content a:hover {
@@ -120,6 +133,10 @@
     width: 400px;
 }
 
+.account-orders {
+    background-color: rgba(195,195,195, 0.9);
+}
+
 .companyinfobox {
     background-image: url("woodbar/redwoodnavbar.jpg");
     border: solid black;
@@ -128,8 +145,9 @@
 }
 
 .faqinfobox {
-    background-image: url("background/grasssand.jpg");
-    width: 500;
+    background-color: rgb(105,67,35);
+    margin: auto;
+    width: 90%;
 }
 
 body.storefront {
@@ -316,6 +334,21 @@ body.login-help {
     }
 }
 
+@keyframes growDown {
+    0% {
+        transform: scaleY(0);
+    }
+
+    75% {
+        transform: scaleY(0.75);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+
 /* This adjust the height of nav bar*/
 
 .productpage {
@@ -432,4 +465,10 @@ body.login-help {
     background-image: url("woodbar/redwoodnavbar.jpg");
     margin: auto;
     width: 70%;
+}
+
+.cart {
+    background-color: rgba(195,195,195, 0.9);
+    width: 80%;
+    margin: auto;
 }
