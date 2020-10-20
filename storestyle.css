@@ -75,7 +75,7 @@
 }
 
 .empty {
-    background-image: url("background/beachsand.jpg");
+    background-image: url("background/spiralbookcenter.jpg");
 }
 
 .backgroundads {
@@ -95,12 +95,12 @@
 }
 
 .companyinfo {
-    background-image: url("background/lake.jpg");
+    background-image: url("background/spiralbookcenter.jpg");
     color: white;
 }
 
 .faq {
-    background-image: url("background/greysand.jpg");
+    background-image: url("background/spiralbookcenter.jpg");
     color: white;
 }
 
@@ -152,11 +152,11 @@
 }
 
 body.storefront {
-    background-image: url("background/swamp.jpg");
+    background-image: url("background/spiralbookcenter.jpg");
 }
 
 .products {
-    background-image: url("woodbar/redwoodnavbar.jpg");
+    background-image: url("woodbar/spiralbookcenter.jpg");
     color: white;
 }
 
@@ -169,20 +169,20 @@ body.storefront {
 
 
 body.account {
-    background-image: url("background/poolofwater.jpg");
+    background-image: url("background/spiralbookcenter.jpg");
 }
 
 body.viewcredit {
-    background-image: url("background/grasssand.jpg")
+    background-image: url("background/spiralbookcenter.jpg")
 }
 
 .login {
-    background-image: url("background/grasssand.jpg");
+    background-image: url("background/spiralbookcenter.jpg");
     color: white;
 }
 
 body.login-help {
-    background-image: url("background/greysand.jpg");
+    background-image: url("background/spiralbookcenter.jpg");
     color: white;
 }
 
