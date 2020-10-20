@@ -9,6 +9,7 @@
     width: 110px;
     height: 30px;
     top: 7px;
+    animation-duration: 3s;
 }
 
 
@@ -123,7 +124,7 @@
     background-image: url("woodbar/redwoodnavbar.jpg");
     border: solid black;
     display: grid;
-    width: 600px;
+    width: 700px;
 }
 
 .faqinfobox {
@@ -244,8 +245,6 @@ body.login-help {
     0% {
         background-color: rgb(255, 255, 181);
     }
-
-
 
     25% {
         background-color: rgb(252, 252, 0);
@@ -387,11 +386,13 @@ body.login-help {
     justify-self: center;
     align-self: center;
     color: black;
-    font-size: 15px;
+    font-size: 12px;
     margin: 0;
     border: 0;
 }
 
+
+/*These affects the change of product page's own list of products*/
 .productlink {
     text-decoration: none;
     margin: 0;
