@@ -3,10 +3,13 @@
 
 <head>
     <link rel="stylesheet" href="../storestyle.css">
-
+    <link href="../products/product.js">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>American Dream</title>
+    <script language="javaScript" SRC="product.js">
+
+    </script>
 </head>
 
 <body class="products">
@@ -47,14 +50,25 @@
         <img class="productimg" src="../books/AmericanDream.jpg" alt="Chasing the American Dream">
         <p class="productdescription">This is a book about the American dream.</p>
         <h2 class="productprice">$9.99</h2>
-        <button type="submit" onclick="document.getElementById('demo').innerHTML=Date()" class="productcart addCart">
+        <p id="demo1"><br></p>
+        <button type="submit" onclick="document.getElementById('demo1').innerHTML=Date()" class="productcart addCart">
         </button>
 
         <br>
+        <label for="quantity">The max quantity is 30</label>
+        <p></p><br><input type="number" id="quantity" name="quantity" min="1" max="30"><br><br>
+        <p id="quantity"></p>
+
+        <br>
+        <br>
+
         <p></p>
-        <p id="demo"> </p>
+
         <br>
     </div>
+
+
+
     <br>
 
     <!--Other products-->
@@ -138,6 +152,8 @@
             </div>
         </a>
     </div>
+
+
 </body>
 
 </html>
