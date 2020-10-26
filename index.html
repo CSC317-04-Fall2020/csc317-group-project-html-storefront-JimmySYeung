@@ -9,8 +9,25 @@
 <body class="storefront">
 
     <table background="toys/deadpoolpikachu.JPG" width="70%" height="100" align="center">
+
         <tr>
+
             <label for="category"></label>
+            <th scope="col">
+                <div class="dropdown">
+                    <button class="dropbtn">Theme store</button>
+                    <div class="dropdown-content">
+                        <button type="button" onclick="bgchange1()">Spiral Book
+                            Theme</button>
+                        <br>
+                        <button type="button" onclick="bgchange2()">Alligator Theme</button>
+                        <br>
+                        <button type="button" onclick="bgchange3()">Water Theme</button>
+                        <br>
+                        <button type="button" onclick="bgchange4()">Sand footprint Theme</button>
+                    </div>
+                </div>
+            </th>
             <th scope="col">
                 <div class="dropdown">
                     <button class="dropbtn">Select a category</button>
@@ -23,6 +40,7 @@
                 </div>
             </th>
             <div class="woodbar">
+
                 <th scope="col"><a href="index.html"><img src="woodbar/home.jpg" class="wood"></th>
                 <div class="wrap">
                     <th scope="col">
@@ -82,6 +100,27 @@
         <a href="companyinfo.html"><img src="woodbar/companyinfo.jpg" class="wood">
             <a href="faq.html"><img src="woodbar/FAQ.jpg" class="wood">
     </div>
+    <script>
+        function bgchange1() {
+            document.body.style.backgroundColor = "#f3f3f3";
+            document.body.style.backgroundImage = "url('background/spiralbook.jpg')";
+        }
+
+        function bgchange2() {
+            document.body.style.backgroundColor = "#f3f3f3";
+            document.body.style.backgroundImage = "url('background/alligator1.jpg')";
+        }
+
+        function bgchange3() {
+            document.body.style.backgroundColor = "#f3f3f3";
+            document.body.style.backgroundImage = "url('background/whiteleafwater.jpg')";
+        }
+
+        function bgchange4() {
+            document.body.style.backgroundColor = "#f3f3f3";
+            document.body.style.backgroundImage = "url('background/beachsand.jpg')";
+        }
+    </script>
 </body>
 
 </html>
