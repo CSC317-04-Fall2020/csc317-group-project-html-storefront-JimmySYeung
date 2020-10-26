@@ -47,13 +47,17 @@
         <img class="productimg" src="../toys/McFarlane.jpg" alt="Ochaco Uraraka Figure">
         <p class="productdescription">This is a figure of Ochaco Uraraka.</p>
         <h2 class="productprice">$19.99</h2>
-        <button type="submit" onclick="document.getElementById('demo').innerHTML=Date()" class="productcart addCart">
-        </button>
         <br>
-        <label for="quantity">The max quantity is 30</label>
+
+        </p>
+        <button type="submit" onclick="document.getElementById('demo1').innerHTML=Date()" class="productcart addCart">
+        </button>
+        <b id="demo1"> </b>
+        <br><b></b>
+        <label for="quantity"><br>The max quantity is 30</label>
         <p></p><br><input type="number" id="quantity" name="quantity" min="1" max="30"><br><br>
         <p id="quantity"></p>
-
+        <button onclick="buyMax()">Buy All</button>
         <br>
         <br>
         <p></p>
@@ -143,6 +147,12 @@
             </div>
         </a>
     </div>
+
+    <script>
+        function buyMax() {
+            document.getElementById("quantity").value = 30;
+        }
+    </script>
     </table>
 </body>
 

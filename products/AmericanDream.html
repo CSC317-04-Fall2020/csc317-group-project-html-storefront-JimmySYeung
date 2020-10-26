@@ -50,15 +50,17 @@
         <img class="productimg" src="../books/AmericanDream.jpg" alt="Chasing the American Dream">
         <p class="productdescription">This is a book about the American dream.</p>
         <h2 class="productprice">$9.99</h2>
-        <p id="demo1"><br></p>
+        <br>
+
+        </p>
         <button type="submit" onclick="document.getElementById('demo1').innerHTML=Date()" class="productcart addCart">
         </button>
-
-        <br>
-        <label for="quantity">The max quantity is 30</label>
+        <b id="demo1"> </b>
+        <br><b></b>
+        <label for="quantity"><br>The max quantity is 30</label>
         <p></p><br><input type="number" id="quantity" name="quantity" min="1" max="30"><br><br>
         <p id="quantity"></p>
-
+        <button onclick="buyMax()">Buy All</button>
         <br>
         <br>
 
@@ -152,6 +154,18 @@
             </div>
         </a>
     </div>
+
+    <script>
+        function buyMax() {
+            document.getElementById("quantity").value = 30;
+        }
+    </script>
+
+    <script>
+        function buyMax() {
+            document.getElementById("quantity").value = 30;
+        }
+    </script>
 
 
 </body>
