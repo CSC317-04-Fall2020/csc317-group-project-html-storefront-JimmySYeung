@@ -430,6 +430,19 @@ body.login-help {
     border: 0;
 }
 
+.cartAdd{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    max-height: 200px;
+}
+
+.cartButton{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
 
 /*These affects the change of product page's own list of products*/
 .productlink {
@@ -477,4 +490,19 @@ body.login-help {
     background-color: rgba(195, 195, 195, 0.9);
     width: 80%;
     margin: auto;
+}
+
+.fullcartrow{
+    display: grid;
+    margin-left: 10%;
+    margin-right: 10%;
+    grid-template-columns: 2fr 3fr 1fr 1fr 1fr;
+    border: solid black 1px;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(221, 148, 52);
+}
+
+.cartimg{
+    width: 30%;
 }
