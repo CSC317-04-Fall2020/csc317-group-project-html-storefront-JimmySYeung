@@ -39,26 +39,41 @@
     </table>
     <fieldset>
         <div class="creditcard">
-            <label for="fname">First Name:</label>
-            <input type="text" name="fname" />
-            <br>
-            <label for="lname">Last Name:</label>
-            <input type="text" name="lname">
+            <form name="creditcard-form" id="creditcard-form" action="javascript:saveCreditCard()">
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" id="fname" />
+                <br>
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" id="lname">
 
-            <br><label for="addrs">Address:</label>
-            <input type="text" name="addrs" />
-            <br>
-            <label for="ccnum">Credit Card number:</label>
-            <input type="text" name="ccnum" />
+                <br><label for="addrs">Address:</label>
+                <input type="text" name="addrs" id="addrs">
+                <br>
+                <label for="ccnum">Credit Card number:</label>
+                <input type="text" name="ccnum" id="ccnum">
 
-            <br><label for="nameoncc">Name On Card:</label>
-            <input type="text" name="nameoncc" />
-            <br>
-            <label for="ccvcode">CCV Code:</label>
-            <input type="text" name="ccvcode" />
-            <br><button type="submit" value="Submit">Save</button>
+                <br><label for="nameoncc">Name On Card:</label>
+                <input type="text" name="nameoncc" id="nameoncc">
+                <br>
+                <label for="ccvcode">CCV Code:</label>
+                <input type="text" name="ccvcode" id="ccvcode">
+                <br><button type="submit" value="Submit">Save</button>
+            </form>
         </div>
     </fieldset>
 </body>
+<script>
+    function saveCreditCard() {
+        document.cookie = "First Name=" + document.getElementById('fname').value;
+        document.cookie = "Last Name=" + document.getElementById('lname').value;
+        document.cookie = "Address=" + document.getElementById('addrs').value;
+        document.cookie = "CC Number=" + document.getElementById('ccnum').value;
+        document.cookie = "CC Name=" + document.getElementById('nameoncc').value;
+        document.cookie = "CC CCV Code=" + document.getElementById('ccvcode').value;
+
+        alert('Credit Card Saved');
+    }
+    alert('Saved Data: ' + document.cookie);
+</script>
 
 </html>
