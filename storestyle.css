@@ -165,7 +165,7 @@ body.storefront {
 }
 
 .addCart {
-    background-image: url("products/productpartofpage/addtocart.jpg");
+    background-image: url("products/addtocart.jpg");
     width: 125px;
     height: 50px;
 }
@@ -430,7 +430,7 @@ body.login-help {
     border: 0;
 }
 
-.cartAdd{
+.cartAdd {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
@@ -438,7 +438,7 @@ body.login-help {
     max-height: 200px;
 }
 
-.cartButton{
+.cartButton {
     grid-column-start: 1;
     grid-column-end: 4;
 }
@@ -492,7 +492,7 @@ body.login-help {
     margin: auto;
 }
 
-.fullcartrow{
+.fullcartrow {
     display: grid;
     margin-left: 10%;
     margin-right: 10%;
@@ -503,6 +503,6 @@ body.login-help {
     background-color: rgb(221, 148, 52);
 }
 
-.cartimg{
+.cartimg {
     width: 30%;
 }
