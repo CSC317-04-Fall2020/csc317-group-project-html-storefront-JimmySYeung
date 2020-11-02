@@ -503,6 +503,17 @@ body.login-help {
     background-color: rgb(221, 148, 52);
 }
 
+.fulltrackrow {
+    display: grid;
+    margin-left: 10%;
+    margin-right: 10%;
+    grid-template-columns: 2fr 3fr 1fr 1fr 1fr;
+    border: solid black 1px;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(221, 148, 52);
+}
+
 .cartimg {
     width: 30%;
 }
