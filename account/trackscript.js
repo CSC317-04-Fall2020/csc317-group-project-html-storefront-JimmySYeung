@@ -1,5 +1,5 @@
-// This function put items to cart.
-function putItemsToCart() {
+// This function put items to Track.
+function putItemsToTrack() {
     var items = [];
     var quantity = [];
     var time = [];
@@ -25,9 +25,9 @@ function putItemsToCart() {
 
     // This function takes the string
     for (var i = 0; i < items.length; i++) {
-        var cartRow = document.createElement('div');
-        cartRow.classList.add('fullcartrow');
-        var cart = document.getElementById('fullcart');
+        var TrackRow = document.createElement('div');
+        TrackRow.classList.add('fullTrackrow');
+        var Track = document.getElementById('fullTrack');
         var time = "";
         var name = "";
         var img = "";
@@ -108,15 +108,15 @@ function putItemsToCart() {
                 break;
         };
 
-        var cartContent = `<img class="cartimg" src="${img}"> \
+        var TrackContent = `<img class="trackimg" src="${img}"> \
         <h2>${time}</h2>\
         <h2>${name}</h2>\
         <h2>${quantity[i]}</h2>\
         <h2>${price}</h2>\
-        <button type="button" onclick="removeFromCart('${items[i]}')">Remove From Track</button>`;
+        <button type="button" onclick="removeFromTrack('${items[i]}')">Remove From Track</button>`;
 
-        cartRow.innerHTML = cartContent;
-        cart.append(cartRow);
+        TrackRow.innerHTML = TrackContent;
+        Track.append(TrackRow);
     }
 
 }
@@ -132,28 +132,28 @@ function removeFromTrack(name) {
         }
     }
 
-    var cart = document.getElementById("fullcart");
-    while (cart.firstChild) {
-        cart.removeChild(cart.firstChild);
+    var Track = document.getElementById("fullTrack");
+    while (Track.firstChild) {
+        Track.removeChild(Track.firstChild);
     }
 
-    var cartRow = document.createElement('div');
-    cartRow.classList.add('fullcartrow');
-    var cart = document.getElementById('fullcart');
-    var cartContent = '<h2>Item</h2>\
+    var TrackRow = document.createElement('div');
+    TrackRow.classList.add('fullTrackrow');
+    var Track = document.getElementById('fullTrack');
+    var TrackContent = '<h2>Item</h2>\
     <h2> Time </h2>\
     <h2>Name</h2>\
     <h2>Quantity</h2>\
     <h2>Price</h2>\
-    <h2>Remove</h2>';
+    <h2>You have no history.</h2>';
 
-    cartRow.innerHTML = cartContent;
-    cart.append(cartRow);
+    TrackRow.innerHTML = TrackContent;
+    Track.append(TrackRow);
 
-    putItemsToCart();
+    putItemsToTrack();
 }
 
-window.onload = putItemsToCart();
+window.onload = putItemsToTrack();
 
 //Cookie functions
 
