@@ -126,12 +126,47 @@ function removeFromCart(name) {
     <h2>Name</h2>\
     <h2>Quantity</h2>\
     <h2>Price</h2>\
-    <h2>Remove</h2>';
+    <button type="button" onclick="removeAll()">Remove All</button>';
 
     cartRow.innerHTML = cartContent;
     cart.append(cartRow);
 
     putItemsToCart();
+}
+
+// This function removes all items from cart
+function removeAll(){
+    var items = [];
+    var allCookies = document.cookie.split(';');
+
+    for (var i = 0; i < allCookies.length; i++) {
+        if (allCookies[i].indexOf("product") != -1) {
+            var match = allCookies[i].replace(" ", "");
+            items.push(match.substr(match.indexOf("=") + 1));
+            setCookie(match.substr(0,match.indexOf("=")),"",-1)
+        }
+    }
+
+    for (x of items) {
+        setCookie(x,"",-1)
+    }
+
+    var cart = document.getElementById("fullcart");
+    while (cart.firstChild) {
+        cart.removeChild(cart.firstChild);
+    }
+
+    var cartRow = document.createElement('div');
+    cartRow.classList.add('fullcartrow');
+    var cart = document.getElementById('fullcart');
+    var cartContent = '<h2>Item</h2>\
+    <h2>Name</h2>\
+    <h2>Quantity</h2>\
+    <h2>Price</h2>\
+    <button type="button" onclick="removeAll()">Remove All</button>';
+
+    cartRow.innerHTML = cartContent;
+    cart.append(cartRow);
 }
 
 window.onload = putItemsToCart();
