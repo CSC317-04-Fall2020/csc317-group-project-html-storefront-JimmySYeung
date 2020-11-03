@@ -363,11 +363,13 @@ body.login-help {
 
 .productpage {
     Display: grid;
-    width: 80%;
-    height: 100%;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 1fr 6fr 1fr;
-    margin-left: 10%;
+    width: 40%;
+    height: 40%;
+    grid-template-columns: 6fr 2fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    margin-left: 20%;
+    Padding:30px;
+
 }
 
 .producttitle {
