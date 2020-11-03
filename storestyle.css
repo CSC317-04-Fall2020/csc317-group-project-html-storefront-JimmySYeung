@@ -239,6 +239,9 @@ body.login-help {
     transition: .5s ease;
     backface-visibility: hidden;
 }
+.productvisible:hover{
+    opacity:1;
+    transform:scale(1.3);
 
 .wood:hover {
     opacity: .8;
