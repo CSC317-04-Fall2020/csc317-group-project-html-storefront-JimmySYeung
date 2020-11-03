@@ -21,7 +21,8 @@ function addToCart(product){
 
     document.cookie = "product"+ productNumber + "=" + product +";path=/;expires=" + expDate.toDateString;
     document.cookie = product + "=" + quantity +";path=/;expires=" + expDate.toDateString;
-
+    
+    alert("Item added to cart");
 }
 
 
