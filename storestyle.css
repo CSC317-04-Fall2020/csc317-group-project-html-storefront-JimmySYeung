@@ -235,13 +235,14 @@ body.login-help {
 }
 
 .productvisible {
-    opacity: .7;
+    opacity: .9;
     transition: .5s ease;
     backface-visibility: hidden;
 }
 .productvisible:hover{
     opacity:1;
-    transform:scale(1.3);
+    transform:scale(1.2);
+}
 
 .wood:hover {
     opacity: .8;
