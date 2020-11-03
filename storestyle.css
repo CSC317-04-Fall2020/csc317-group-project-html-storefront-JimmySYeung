@@ -523,6 +523,17 @@ body.login-help {
 .cartimg {
     width: 30%;
 }
+.carttotal{
+ display: grid;
+    margin-left: 70%;
+    margin-right: 10%;
+    grid-template-columns: 1fr 1fr;
+    border: solid black 1px;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(254, 216, 177);
+}
+
 
 .ccgrid{
     display: grid;
