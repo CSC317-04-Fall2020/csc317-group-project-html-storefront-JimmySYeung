@@ -5,9 +5,9 @@ function putItemsToTrack() {
     var time = [];
     var allCookies = document.cookie.split(';');
 
-    // The cookies take new product being added. 
+    // The cookies take new product1 being added. 
     for (var i = 0; i < allCookies.length; i++) {
-        if (allCookies[i].indexOf("product") != -1) {
+        if (allCookies[i].indexOf("product1") != -1) {
             var match = allCookies[i].replace(" ", "");
             items.push(match.substr(match.indexOf("=") + 1));
         }
@@ -16,7 +16,7 @@ function putItemsToTrack() {
 
     for (x of items) {
         for (var i = 0; i < allCookies.length; i++) {
-            if ((allCookies[i].indexOf(x) != -1) && (allCookies[i].indexOf("product") == -1)) {
+            if ((allCookies[i].indexOf(x) != -1) && (allCookies[i].indexOf("product1") == -1)) {
                 match = allCookies[i].replace(" ", "");
                 quantity.push(match.substr(match.indexOf("=") + 1));
             }
@@ -121,14 +121,14 @@ function putItemsToTrack() {
 
 }
 
-//This function removes product from track.
+//This function removes product1 from track.
 function removeFromTrack(name) {
     var cookies = document.cookie.split(";");
     for (i of cookies) {
         if (i.indexOf(name) != -1) {
             var match = i.replace(" ", "");
-            var cName = match.substr(0, match.indexOf("="));
-            setCookie(cName, "", -1);
+            var tName = match.substr(0, match.indexOf("="));
+            setCookie(tName, "", -1);
         }
     }
 
@@ -157,11 +157,11 @@ window.onload = putItemsToTrack();
 
 //Cookie functions
 
-function setCookie(cname, cvalue, exdays) {
+function setCookie(tname, tvalue, exdays) {
     var d = new Date();
-    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-    var expires = "expires=" + d.toGMTString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    d.setTime(d.getTime() + (exdays * 23 * 60 * 60 * 1000));
+    var expires1 = "expires1=" + d.toGMTString();
+    document.cookie = tname + "=" + tvalue + ";" + expires1 + ";path=/";
 }
 
 function deleteCookies() {
