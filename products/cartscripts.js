@@ -1,7 +1,13 @@
+
+
 //This function add items to cart page by clicking buy button.
 function putItemsToCart() {
     var items = [];
+    var subtotal=[];
     var quantity = [];
+    var total=0;
+    var price;
+    
     var allCookies = document.cookie.split(';');
 
     for (var i = 0; i < allCookies.length; i++) {
@@ -26,80 +32,91 @@ function putItemsToCart() {
         var cart = document.getElementById('fullcart');
         var name = "";
         var img = "";
-        var price = "";
+        
+	
 
         switch (items[i]) {
             case ('AmericanDream'):
                 name = "Chasing the American Dream";
                 img = "../books/AmericanDream.jpg";
-                price = "$9.99";
+                price = 9.99;
                 break;
             case ('deadpoolpikachu'):
                 name = "Deadpool Pikachu";
                 img = "../toys/deadpoolpikachu.JPG";
-                price = "$19.99";
+                price = 19.99;
                 break;
             case ('doggycoin'):
                 name = "Doggy Coin";
                 img = "../toys/doggycoin.JPG";
-                price = "$4.99";
+                price = 4.99;
                 break;
             case ('heroacademiavol1'):
                 name = "My Hero Academia vol. 1";
                 img = "../books/heroacademiavol1.jpg";
-                price = "$9.99";
+                price = 9.99;
                 break;
             case ('introtojava'):
                 name = "Introduction to Java Programming";
                 img = "../books/introtojava.jpg";
-                price = "$29.99";
+                price = 29.99;
                 break;
             case ('introtophysicalanthropology'):
                 name = "Introduction to Physical Anthropology";
                 img = "../books/introtophysicalanthropology.jpg";
-                price = "$149.99";
+                price = 149.99;
                 break;
             case ('introtosociology'):
                 name = "Introduction to Sociology";
                 img = "../books/introtosociology.jpg";
-                price = "$49.99";
+                price = 49.99;
                 break;
             case ('IzukuMidoriya'):
                 name = "Izuku Midoriya Figure";
                 img = "../toys/IzukuMidoriya.jpg";
-                price = "$19.99";
+                price = 19.99;
                 break;
             case ('McFarlane'):
                 name = "Ochaco Uraraka Figure";
                 img = "../toys/McFarlane.jpg";
-                price = "$19.99";
+                price = 19.99;
                 break;
             case ('python'):
                 name = "Python Crash Course";
                 img = "../books/python.jpg";
-                price = "$14.99";
+                price = 14.99;
                 break;
             case ('websiteplayground'):
                 name = "Web Design Playground";
                 img = "../books/websiteplayground.jpg";
-                price = "$29.99";
+                price = 29.99;
                 break;
             case ('whitecollarcrimebook'):
                 name = "Trusted Criminals";
                 img = "../books/whitecollarcrimebook.jpg";
-                price = "$69.99";
+                price = 69.99;
                 break;
         };
 
+	subtotal[i]=quantity[i]*price;
         var cartContent = `<img class="cartimg" src="${img}"> \
         <h2>${name}</h2>\
         <h2>${quantity[i]}</h2>\
-        <h2>${price}</h2>\
+        <h2>$${price}</h2>\
         <button type="button" onclick="removeFromCart('${items[i]}')">Remove From Cart</button>`;
 
         cartRow.innerHTML = cartContent;
         cart.append(cartRow);
+	 
+			
+	
     }
+	for(var i=0;i<subtotal.length;i++){
+	   total=total+subtotal[i]
+	};
+	total=Math.round(total*100)/100
+	document.getElementById("carttotal").innerHTML='$'+total;		
+
 
 }
 
@@ -126,13 +143,59 @@ function removeFromCart(name) {
     <h2>Name</h2>\
     <h2>Quantity</h2>\
     <h2>Price</h2>\
-    <h2>Remove</h2>';
+    <button type="button" onclick="removeAll()">Remove All</button>';
 
     cartRow.innerHTML = cartContent;
     cart.append(cartRow);
 
     putItemsToCart();
+    
+    
+    
 }
+
+// This function removes all items from cart
+function removeAll(){
+    var items = [];
+    var allCookies = document.cookie.split(';');
+
+    for (var i = 0; i < allCookies.length; i++) {
+        if (allCookies[i].indexOf("product") != -1) {
+            var match = allCookies[i].replace(" ", "");
+            items.push(match.substr(match.indexOf("=") + 1));
+            setCookie(match.substr(0,match.indexOf("=")),"",-1)
+        }
+    }
+
+    for (x of items) {
+        setCookie(x,"",-1)
+    }
+
+    var cart = document.getElementById("fullcart");
+    while (cart.firstChild) {
+        cart.removeChild(cart.firstChild);
+    }
+
+    var cartRow = document.createElement('div');
+    cartRow.classList.add('fullcartrow');
+    var cart = document.getElementById('fullcart');
+    var cartContent = 
+    '<h2>Item</h2>\
+    <h2>Name</h2>\
+    <h2>Quantity</h2>\
+    <h2>Price</h2>\
+    <button type="button" onclick="removeAll()">Remove All</button>';
+
+    cartRow.innerHTML = cartContent;
+    cart.append(cartRow);
+
+    var total=0;
+    document.getElementById("carttotal").innerHTML='$'+total;
+    
+    
+}
+
+
 
 window.onload = putItemsToCart();
 

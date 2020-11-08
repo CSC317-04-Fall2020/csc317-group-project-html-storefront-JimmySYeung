@@ -37,7 +37,7 @@
             </div>
             </div>
             <th scope="col"><a href="../account.html"><img src="../woodbar/account.jpg" class="wood"></th>
-            <th scope="col"><a href="cart.html"><img src="../woodbar/cart.jpg" class="wood"></th>
+            <th scope="col"><a href="empty.html"><img src="../woodbar/cart.jpg" class="wood"></th>
 
         </tr>
     </table>
@@ -50,12 +50,21 @@
             <h2>Name</h2>
             <h2>Quantity</h2>
             <h2>Price</h2>
-            <h2>Remove</h2>
+            <button type="button" onclick="removeAll()">Remove All</button>
         </div>
     </div>
+	<div class="carttotal">
+	  <h2>Total:</h2>
+	  <h2 id="carttotal"></h2> 
+	</div>
+
+        	
 
     <script src="cartscripts.js">
     </script>
-</body>
+			
+
+	
+	</body>
 
 </html>
