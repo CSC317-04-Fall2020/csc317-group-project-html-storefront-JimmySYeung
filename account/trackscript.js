@@ -144,8 +144,7 @@ function removeFromTrack(name) {
     <h2> Time </h2>\
     <h2>Name</h2>\
     <h2>Quantity</h2>\
-    <h2>Price</h2>\
-    <h2>You have no history.</h2>';
+    <h2>Price</h2>';
 
     TrackRow.innerHTML = TrackContent;
     Track.append(TrackRow);
@@ -160,7 +159,7 @@ window.onload = putItemsToTrack();
 function setCookie(tname, tvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 23 * 60 * 60 * 1000));
-    var expires1 = "expires1=" + d.toGMTString();
+    var expires1 = "expires=" + d.toGMTString();
     document.cookie = tname + "=" + tvalue + ";" + expires1 + ";path=/";
 }
 

@@ -19,18 +19,10 @@ function addToCart(product) {
 
     var quantity = document.getElementById("quantity").value
 
-<<<<<<< HEAD
     document.cookie = "product" + productNumber + "=" + product + ";path=/;expires=" + expDate.toDateString;
     document.cookie = product + "=" + quantity + ";path=/;expires=" + expDate.toDateString;
 
-    document.cookie = "product1" + productNumber1 + "=" + product1 + ";path=/;expires1=" + expDate.toDateString;
-    document.cookie = product1 + "=" + quantity + ";path=/;expires1=" + expDate.toDateString;
-=======
-    document.cookie = "product"+ productNumber + "=" + product +";path=/;expires=" + expDate.toDateString;
-    document.cookie = product + "=" + quantity +";path=/;expires=" + expDate.toDateString;
-    
     alert("Item added to cart");
->>>>>>> 4fab1df0ebf16d1463e5524aa5baa27fa700b641
 }
 
 
