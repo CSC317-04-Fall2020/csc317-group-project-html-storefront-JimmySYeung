@@ -7,7 +7,7 @@ function putItemsToTrack() {
 
     // The cookies take new product1 being added. 
     for (var i = 0; i < allCookies.length; i++) {
-        if (allCookies[i].indexOf("product1") != -1) {
+        if (allCookies[i].indexOf("product") != -1) {
             var match = allCookies[i].replace(" ", "");
             items.push(match.substr(match.indexOf("=") + 1));
         }
@@ -16,7 +16,7 @@ function putItemsToTrack() {
 
     for (x of items) {
         for (var i = 0; i < allCookies.length; i++) {
-            if ((allCookies[i].indexOf(x) != -1) && (allCookies[i].indexOf("product1") == -1)) {
+            if ((allCookies[i].indexOf(x) != -1) && (allCookies[i].indexOf("product") == -1)) {
                 match = allCookies[i].replace(" ", "");
                 quantity.push(match.substr(match.indexOf("=") + 1));
             }
