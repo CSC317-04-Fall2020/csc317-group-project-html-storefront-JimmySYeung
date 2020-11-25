@@ -1,4 +1,4 @@
-const people = [{
+const products = [{
         name: 'google',
         link: "https://www.google.com/"
     },
@@ -61,7 +61,7 @@ searchInput.addEventListener('input', (event) => {
     let value = event.target.value;
     if (value && value.trim().length > 0) {
         value = value.trim().toLowerCase();
-        setList(people.filter(person => {
+        setList(products.filter(person => {
             return person.name.includes(value);
         }).sort((personA, personB) => {
             return getRelevancy(personB.name, value) - getRelevancy(personA.name, value);
