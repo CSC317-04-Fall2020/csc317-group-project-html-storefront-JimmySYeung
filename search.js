@@ -1,10 +1,106 @@
 const products = [{
-        name: 'google',
-        link: "https://www.google.com/"
+        name: 'home',
+        link: "index.html"
     },
     {
-        name: 'youtube',
-        link: "https://www.youtube.com/"
+        name: 'account',
+        link: "account.html"
+
+    },
+    {
+        name: 'company information',
+        link: "companyinfo.html"
+
+    },
+    {
+        name: 'faq',
+        link: "faq.html"
+
+    },
+    {
+        name: 'login help',
+        link: "login-help.html"
+
+    },
+    {
+        name: 'login',
+        link: "login.html"
+
+    },
+    {
+        name: 'manga',
+        link: "manga.html"
+
+    },
+    {
+        name: 'text books',
+        link: "textbooks.html"
+
+    },
+    {
+        name: 'toys',
+        link: "toys.html"
+
+    },
+    {
+        name: 'american dream',
+        link: "products/AmericanDream.html"
+
+    },
+    {
+        name: 'izuku midoriya',
+        link: "products/IzukuMidoriya.html"
+
+    },
+    {
+        name: 'mcflarlane',
+        link: "products/McFarlane.html"
+
+    },
+    {
+        name: 'dead pool pikachu',
+        link: "products/deadpoolpikachu.html"
+
+    },
+    {
+        name: 'doggy coin',
+        link: "products/doggycoin.html"
+
+    },
+    {
+        name: 'hero academia vol 1',
+        link: "products/heroacademiavol1.html"
+
+    },
+    {
+        name: 'intro to java',
+        link: "products/intojava.html"
+
+    },
+    {
+        name: 'intro to physical anthropology',
+        link: "products/introtophysicalanthropology.html"
+
+    },
+    {
+        name: 'intro to sociology',
+        link: "products/introtosociology.html"
+
+    },
+    {
+        name: 'intro to python',
+        link: "products/python.html"
+
+    },
+    {
+        name: 'white collar crime',
+        link: "products/whitecollarcrimebook.html"
+
+    },
+    {
+        name: 'website playground',
+        link: "products/websiteplayground.html"
+
     }
 ];
 
@@ -47,11 +143,13 @@ function setNoResults() {
 function getRelevancy(value, searchTerm) {
     if (value === searchTerm) {
         return 2;
-    } else if (value.starsWith(searchTerm)) {
+    } else if (value.startsWith(searchTerm)) {
         return 1;
     } else if (value.includes(searchTerm)) {
         return 0;
     }
+
+
 }
 
 
