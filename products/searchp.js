@@ -74,7 +74,7 @@ const products = [{
     },
     {
         name: 'intro to java',
-        link: "intojava.html"
+        link: "introtojava.html"
 
     },
     {
