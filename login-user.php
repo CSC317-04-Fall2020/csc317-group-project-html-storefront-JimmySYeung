@@ -79,7 +79,16 @@
 
         </tr>
     </table> 
-    <div class="container">
+<br><br><br><br><br><br><br><br><br><br>
+    <table class="container">
+                <tr>
+            <th width="25%"></th>
+            <th width="10%"></th>
+            <th width="15%"></th>
+            <th width="15%"></th>
+            <th width="10%"></th>
+            <th width="25%"></th>
+        </tr>
         <div class="row">
             <div class="col-md-4 offset-md-4 form login-form">
                 <form action="login-user.php" method="POST" autocomplete="">
@@ -112,7 +121,28 @@
                 </form>
             </div>
         </div>
+                </table>
+        <div id="return-to-home">
+        <br><br><br><br><br><br><br><br><br><br>
+        <fieldset class="backgroundads" style="float:right"></fieldset>
+        <fieldset class="backgroundads1"></fieldset>
+        <br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br>
+        <table align="center">
+            <tr>
+                <th></th>
+            </tr>
+            <tr>
+                <td>
+                    <a href="index.html"><img src="woodbar/returnhomepage.jpg" class="wood">
+                </td>
+            </tr>
+        </table>
+
     </div>
-    
+    <div class="woodalign">
+        <a href="companyinfo.html"><img src="woodbar/companyinfo.jpg" class="wood">
+        <a href="faq.html"><img src="woodbar/FAQ.jpg" class="wood">
+    </div>
 </body>
 </html>
