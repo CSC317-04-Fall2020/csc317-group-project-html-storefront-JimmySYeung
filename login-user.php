@@ -6,8 +6,79 @@
     <title>Login Form</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="storestyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
+     <table background="toys/deadpoolpikachu.JPG" width="70%" height="100" align="center">
+
+        <tr>
+
+            <label for="category"></label>
+            <th scope="col">
+                <div class="dropdown">
+                    <button class="dropbtn">Theme store</button>
+                    <div class="dropdown-content">
+                        <button type="button" onclick="bgchange1()">Spiral Book
+                            Theme</button>
+                        <br>
+                        <button type="button" onclick="bgchange2()">Alligator Theme</button>
+                        <br>
+                        <button type="button" onclick="bgchange3()">Water Theme</button>
+                        <br>
+                        <button type="button" onclick="bgchange4()">Sand footprint Theme</button>
+                    </div>
+                </div>
+            </th>
+            <th scope="col">
+                <div class="dropdown">
+                    <button class="dropbtn">Select a category</button>
+                    <div class="dropdown-content">
+                        <a href="index.html">All</a>
+                        <a href="textbooks.html">Textbooks</a>
+                        <a href="manga.html">Manga</a>
+                        <a href="toys.html">Anime Figurines</a>
+                    </div>
+                </div>
+            </th>
+            <div class="woodbar">
+
+                <th scope="col"><a href="index.html"><img src="woodbar/home.jpg" class="wood"></th>
+                <div class="wrap">
+                    <th scope="col">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <span class="fa fa-search" class="form-inline">
+                                        <input autofocus placeholder="search" class="form-inline" type="text"
+                                            autocomplete="off" name="search" id="search" />
+                                    </span>
+                                </span>
+                            </div>
+
+                            <!--This shows the list of search in website-->
+                            <ul class="list-group" id="list"></ul>
+                            <script src="search.js"></script>
+                        </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="woodbar">
+                <th scope="col"><a href="account.html"><img src="woodbar/account.jpg" class="wood"></th>
+                <th scope="col"><a href="products/empty.html"><img src="woodbar/cart.jpg" class="wood"></th>
+            </div>
+            </div>
+
+        </tr>
+    </table> 
     <div class="container">
         <div class="row">
             <div class="col-md-4 offset-md-4 form login-form">
