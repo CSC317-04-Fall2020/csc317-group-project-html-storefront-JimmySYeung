@@ -15,7 +15,17 @@
     <table background="toys/deadpoolpikachu.JPG" width="70%" height="100" align="center">
         <tr>
             <label for="category"></label>
-
+            <th scope="col">
+                <div class="dropdown">
+                    <button class="dropbtn">Themes</button>
+                    <div class="dropdown-content">
+                        <button type="button" onclick="bgchange1()">Spiral</button>
+                        <button type="button" onclick="bgchange2()">Alligator</button>
+                        <button type="button" onclick="bgchange3()">Water</button>
+                        <button type="button" onclick="bgchange4()">Sand</button>
+                    </div>
+                </div>
+            </th>
             <th scope="col">
                 <div class="dropdown">
                     <button class="dropbtn">Select a category</button>
@@ -28,27 +38,29 @@
                 </div>
             </th>
 
-            <th scope="col"><a href="index.html"><img src="woodbar/home.jpg" class="wood"></th>
-            <div class="wrap">
-                <th scope="col">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">
-                                <span class="fa fa-search" class="form-inline">
-                                    <input autofocus placeholder="search" class="form-inline" type="text"
-                                        autocomplete="off" name="search" id="search" />
+            <div class="woodbar">
+                <th scope="col"><a href="index.html"><img src="woodbar/home.jpg" class="wood"></th>
+                <div class="wrap">
+                    <th scope="col">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <span class="fa fa-search" class="form-inline">
+                                        <input autofocus placeholder="search" class="form-inline" type="text"
+                                            autocomplete="off" name="search" id="search" />
+                                    </span>
                                 </span>
-                            </span>
+                            </div>
+
+                            <!--This shows the list of search in website-->
+                            <ul class="list-group" id="list"></ul>
                         </div>
-
-                        <!--This shows the list of search in website-->
-                        <ul class="list-group" id="list"></ul>
-                    </div>
-
-
-                    <script src="search.js"></script>
-                <th scope="col"><a href="account.html"><img src="woodbar/account.jpg" class="wood"></th>
-                <th scope="col"><a href="products/empty.html"><img src="woodbar/cart.jpg" class="wood"></th>
+                    </th>
+                </div>
+            </div>
+            <script src="search.js"></script>
+            <th scope="col"><a href="account.html"><img src="woodbar/account.jpg" class="wood"></th>
+            <th scope="col"><a href="products/empty.html"><img src="woodbar/cart.jpg" class="wood"></th>
 
         </tr>
     </table>
@@ -72,6 +84,43 @@
         <a href="companyinfo.html"><img src="woodbar/companyinfo.jpg" class="wood">
             <a href="faq.html"><img src="woodbar/FAQ.jpg" class="wood">
     </div>
+    <script>
+        function bgchange1() {
+            document.body.style.backgroundColor = "#f3f3f3";
+            document.body.style.backgroundImage = "url('background/spiralbook.jpg')";
+        }
+
+        function bgchange2() {
+            document.body.style.backgroundColor = "#f3f3f3";
+            document.body.style.backgroundImage = "url('background/alligator1.jpg')";
+        }
+
+        function bgchange3() {
+            document.body.style.backgroundColor = "#f3f3f3";
+            document.body.style.backgroundImage = "url('background/whiteleafwater.jpg')";
+        }
+
+        function bgchange4() {
+            document.body.style.backgroundColor = "#f3f3f3";
+            document.body.style.backgroundImage = "url('background/beachsand.jpg')";
+        }
+
+        function infoOn() {
+            document.getElementById("overlay-companyInfo").style.display = block;
+        }
+
+        function infoOff() {
+            document.getElementById("overlay-companyInfo").style.display = none;
+        }
+
+        function faqOn() {
+            document.getElementById("overlay-companyInfo").style.display = block;
+        }
+
+        function faqOff() {
+            document.getElementById("overlay-companyInfo").style.display = none;
+        }
+    </script>
 </body>
 
 </html>

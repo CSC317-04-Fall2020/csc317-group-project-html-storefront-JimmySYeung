@@ -35,11 +35,33 @@
 
 /* These changes the categories setting*/
 
+.dropdown {
+    position: relative;
+    Display: block;
+    z-index: 1;
+    width: auto;
+}
+
+.dropdown:hover {
+    Display: block;
+}
+
+.dropdown-content{
+    position: absolute;
+    font: 15px Arial, sans-serif, bold;
+    text-align: center;
+    top: 100%;
+    left: 0;
+    width: auto;
+    height: auto;
+    perspective: 1000px;
+    Display: none;
+    transform-origin: top center;
+    animation: growDown 0.25s ease-in-out forwards;
+    text-decoration: none;
+}
 
 .dropbtn {
-    /*
-    background-color: #2a9c56;
-    */
     background-image: url("woodbar/navbar.jpg");
     color: white;
     padding: 16px;
@@ -47,43 +69,29 @@
     border: none;
 }
 
-.dropdown {
-    position: relative;
-    Display: block;
-    z-index: 1;
-}
-
-.dropdown:hover {
-    Display: block;
-}
-
-.dropdown-content {
-    position: absolute;
-    background-image: url("woodbar/whiteplank.jpg");
-    top: 100%;
-    left: 0;
-    width: 120%;
-    perspective: 1000px;
-    Display: none;
-    transform-origin: top center;
-    animation: growDown 0.25s ease-in-out forwards
-}
-
-
-
-.dropdown-content a {
+.dropdown-content a, .dropdown-content button{
+    background-color: whitesmoke;
+    border: none;
     color: black;
-    padding: 12px 18px;
-    text-decoration: none;
+    padding: 10px 12px;
     Display: block;
-    height: auto;
+    
+}
+.dropdown-content button{
+    width: 84px;
 }
 
-.dropdown-content a:hover {
-    background-color: yellow
+.dropdown-content a{
+    width: auto;
 }
 
-.dropdown:hover .dropdown-content {
+
+
+.dropdown-content a:hover, .dropdown-content button:hover{
+    background-color: yellow;
+}
+
+.dropdown:hover .dropdown-content{
     Display: block;
 }
 
