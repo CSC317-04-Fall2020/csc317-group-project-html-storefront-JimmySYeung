@@ -65,14 +65,11 @@
         <h2 class="productprice">$9.99</h2>
 
         <div class="cartAdd">
-            <label for="quantity"></label>
-
-            <input type="number" id="quantity" name="quantity" min="1" max="30" value="1">
-            <button onclick="buyMax()">Buy All</button>
-
-            <button type="submit" onclick="addToCart('AmericanDream')" class="productcart addCart cartButton">
-
+            <input type="number" class="quantity" id="quantity" name="quantity" min="1" max="30" value="1">
+            <button  class="buyall" onclick="buyMax()">Buy All</button>
+            <button type="submit" onclick="addToCart('AmericanDream')" class="addCart">
             </button>
+
         </div>
 
         <br>

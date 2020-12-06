@@ -48,7 +48,6 @@ for($i = 0; $i < 12; $i++) {
 	if($skip == false){
 		$sql .= 'INSERT INTO products (productname, price)
 		VALUES ("'.$names[$i].'",'.$prices[$i].');';
-		echo "Added " . $names[$i] . " priced " . $prices[$i];
 	}
 }
 

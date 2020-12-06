@@ -3,10 +3,6 @@
     border: lem solid green;
 }
 
-.productcart {
-    font-size: 16px;
-}
-
 .list-group {
     position: absolute;
 
@@ -192,9 +188,23 @@ body.storefront {
     background-image: url("products/addtocart.jpg");
     width: 125px;
     height: 50px;
+    justify-self: center;
+    align-self: center;
 }
 
+.quantity {
+    height: 50px;
+    width: 50%;
+    justify-self: right;
+    align-self: center;
+}
 
+.buyall {
+    height: 50px;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+}
 
 body.account {
 
@@ -388,9 +398,9 @@ body.login-help {
 
 .productpage {
     Display: grid;
-    width: 40%;
-    height: 40%;
-    grid-template-columns: 6fr 2fr 1fr;
+    width: 60%;
+    height: 800px;
+    grid-template-columns: 4fr 1fr 3fr;
     grid-template-rows: 1fr 4fr 1fr;
     margin-left: 20%;
     Padding: 30px;
@@ -405,7 +415,7 @@ body.login-help {
 
 .productimg {
     grid-area: 2/1/4/2;
-    width: 100%;
+    width: 80%;
 }
 
 .productdescription {
@@ -418,12 +428,6 @@ body.login-help {
     align-self: center;
     justify-self: center;
     grid-area: 3/2/4/3;
-}
-
-.productcart {
-    align-self: center;
-    justify-self: center;
-    grid-area: 3/3/4/4;
 }
 
 .productscroll {
@@ -463,16 +467,11 @@ body.login-help {
 
 .cartAdd {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
-    max-height: 200px;
 }
 
-.cartButton {
-    grid-column-start: 1;
-    grid-column-end: 4;
-}
 
 
 /*These affects the change of product page's own list of products*/
@@ -567,6 +566,11 @@ body.login-help {
     background-color: rgb(254, 216, 177);
 }
 
+.checkoutbtn {
+    grid-column: 1/span 2;
+    justify-items: center;
+    align-items: center;
+}
 
 .ccgrid {
     display: grid;
@@ -578,6 +582,19 @@ body.login-help {
 .savecc {
     width: 50%;
     justify-self: center;
+}
+
+/*Checkout*/
+.checkout{
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.payment{
+    display: grid;
+    width: 60%;
+    background-color: cornsilk;
 }
 
 /*Search engine*/

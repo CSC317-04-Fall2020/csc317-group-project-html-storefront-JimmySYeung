@@ -220,3 +220,12 @@ function deleteCookies() {
 function checkCookie() {
     alert(document.cookie)
 }
+
+function checkout(){
+    var allCookies = document.cookie.split(';');
+    for (i of allCookies) {
+        if (i.indexOf("product") != -1) {
+            location.replace("checkout.php")
+        }
+    }
+}
