@@ -1,6 +1,21 @@
 
 
 //This function add items to cart page by clicking buy button.
+function totalitems(){
+    var items = [];
+    var allCookies = document.cookie.split(';');
+
+    for (var i = 0; i < allCookies.length; i++) {
+        if (allCookies[i].indexOf("product") != -1) {
+            var match = allCookies[i].replace(" ", "");
+            items.push(match.substr(match.indexOf("=") + 1));
+        }
+    }
+
+    var total = document.getElementById("total");
+    total.value = items.length;
+}
+
 function putItemsToCart() {
     var items = [];
     var subtotal=[];
@@ -98,17 +113,15 @@ function putItemsToCart() {
                 break;
         };
 
-	subtotal[i]=quantity[i]*price;
+	    subtotal[i]=quantity[i]*price;
         var cartContent = `<img class="cartimg" src="${img}"> \
-        <h2>${name}</h2>\
-        <h2>${quantity[i]}</h2>\
+        <input class="nameinput" value="${name}" name="item${i}" readonly>\
+        <input value="${quantity[i]}" name="quantity${i}" readonly>\
         <h2>$${price}</h2>\
         <button type="button" onclick="removeFromCart('${items[i]}')">Remove From Cart</button>`;
 
         cartRow.innerHTML = cartContent;
         cart.append(cartRow);
-	 
-			
 	
     }
 	for(var i=0;i<subtotal.length;i++){
@@ -139,8 +152,10 @@ function removeFromCart(name) {
     var cartRow = document.createElement('div');
     cartRow.classList.add('fullcartrow');
     var cart = document.getElementById('fullcart');
-    var cartContent = '<h2>Item</h2>\
-    <h2>Name</h2>\
+    var cartContent = '<div class="itemtotal">\
+    <h2>Items</h2>\
+    <input name="total" id="total" readonly>\
+    </div>\
     <h2>Quantity</h2>\
     <h2>Price</h2>\
     <button type="button" onclick="removeAll()">Remove All</button>';
@@ -149,7 +164,7 @@ function removeFromCart(name) {
     cart.append(cartRow);
 
     putItemsToCart();
-    
+    totalitems();
     
     
 }
@@ -180,7 +195,10 @@ function removeAll(){
     cartRow.classList.add('fullcartrow');
     var cart = document.getElementById('fullcart');
     var cartContent = 
-    '<h2>Item</h2>\
+    '<div class="itemtotal">\
+    <h2>Items</h2>\
+    <input name="total" id="total" readonly>\
+    </div>\
     <h2>Name</h2>\
     <h2>Quantity</h2>\
     <h2>Price</h2>\
@@ -191,12 +209,13 @@ function removeAll(){
 
     var total=0;
     document.getElementById("carttotal").innerHTML='$'+total;
+    totalitems();
     
     
 }
 
 
-
+window.onload = totalitems();
 window.onload = putItemsToCart();
 
 //Cookie functions
@@ -219,13 +238,4 @@ function deleteCookies() {
 
 function checkCookie() {
     alert(document.cookie)
-}
-
-function checkout(){
-    var allCookies = document.cookie.split(';');
-    for (i of allCookies) {
-        if (i.indexOf("product") != -1) {
-            location.replace("checkout.php")
-        }
-    }
 }

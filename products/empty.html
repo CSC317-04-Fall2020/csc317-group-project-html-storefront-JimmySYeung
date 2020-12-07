@@ -57,9 +57,13 @@
 
     <br><br>
 
+    <form action="checkout.php">
     <div id="fullcart">
         <div class="fullcartrow">
-            <h2>Item</h2>
+            <div class="itemtotal">
+                <h2>Items</h2>
+                <input name="total" id="total" readonly>
+            </div>
             <h2>Name</h2>
             <h2>Quantity</h2>
             <h2>Price</h2>
@@ -69,9 +73,9 @@
     <div class="carttotal">
         <h2>Total:</h2>
         <h2 id="carttotal"></h2>
-        <button class="checkoutbtn" onclick="checkout()">Checkout</button>
+        <button class="checkoutbtn" type="submit">Checkout</button>
     </div>
-
+    </form>
 
 
     <script src="cartscripts.js">
