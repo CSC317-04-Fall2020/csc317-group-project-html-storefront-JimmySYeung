@@ -55,15 +55,10 @@
     transform-origin: top center;
     animation: growDown 0.25s ease-in-out forwards;
     text-decoration: none;
+
 }
 
-.dropbtn {
-    background-image: url("woodbar/navbar.jpg");
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-}
+
 
 .dropdown-content a, .dropdown-content button{
     background-color: whitesmoke;
