@@ -65,7 +65,7 @@
     border: none;
 }
 
-.dropdown-content a{
+.dropdown-content a, .dropdown-content button{
     background-color: whitesmoke;
     border: none;
     color: black;
@@ -73,13 +73,17 @@
     Display: block;
     
 }
+.dropdown-content button{
+    width: 84px;
+}
+
 .dropdown-content a{
     width: auto;
 }
 
 
 
-.dropdown-content a:hover{
+.dropdown-content a:hover, .dropdown-content button:hover{
     background-color: yellow;
 }
 
@@ -91,11 +95,11 @@
     /*
     background-color: brown;
     */
-    background-image: url("woodbar/redwoodnavbar.jpg");
+    background-color: rgb(215, 238, 223);
 }
 
 .empty {
-    background-image: url("background/alligator1.jpg");
+    background-color: rgb(215, 238, 223);
 }
 
 .backgroundads {
@@ -115,12 +119,12 @@
 }
 
 .companyinfo {
-    background-image: url("background/alligator1.jpg");
+    background-color: rgb(215, 238, 223);
     color: white;
 }
 
 .faq {
-    background-image: url("background/alligator1.jpg");
+    background-color: rgb(215, 238, 223);
     color: white;
 }
 
@@ -136,8 +140,9 @@
 }
 
 .creditcard {
-    background-color: green;
+    background-color: yellow;
     border: 15px solid black;
+
     animation-name: credit;
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -145,11 +150,12 @@
 }
 
 .accountintro {
-    background-image: url("woodbar/redwoodnavbar.jpg");
-    color: white;
+
+    color: black;
     border: none !important;
     Display: grid;
     width: 400px;
+    padding:10px;
 }
 
 .account-orders {
@@ -157,11 +163,12 @@
 }
 
 .companyinfobox {
-    background-image: url("woodbar/redwoodnavbar.jpg");
+    background-image: url("background/alligator1.jpg");
     border: solid black;
     Display: grid;
     width: 700px;
     margin: auto;
+
 }
 
 .faqinfobox {
@@ -171,11 +178,11 @@
 }
 
 body.storefront {
-    background-image: url("background/alligator1.jpg");
+    background-color: rgb(215, 238, 223);
 }
 
 .products {
-    background-image: url("background/alligator1.jpg");
+    background-color: rgb(215, 238, 223);
     color: white;
 }
 
@@ -203,20 +210,20 @@ body.storefront {
 
 body.account {
 
-    background-image: url("background/alligator1.jpg");
+    background-color: rgb(215, 238, 223);
 }
 
 body.viewcredit {
-    background-image: url("background/alligator1.jpg")
+    background-color: rgb(215, 238, 223);
 }
 
 .login {
-    background-image: url("background/alligator1.jpg");
+    background-color: rgb(215, 238, 223);
     color: white;
 }
 
 body.login-help {
-    background-image: url("background/alligator1.jpg");
+    background-color: rgb(215, 238, 223);
     color: white;
 }
 
@@ -258,9 +265,12 @@ body.login-help {
 }
 
 .accountbutton {
-    opacity: .7;
+    opacity: .9;
     transition: .5s ease;
     backface-visibility: hidden;
+}
+.accountbutton:hover{
+    transform:scale(1.1);
 }
 
 .productvisible {
@@ -301,23 +311,20 @@ body.login-help {
 @keyframes credit {
 
     0% {
-        background-color: palegreen;
+        background-color: rgb(255, 255, 181);
     }
 
-    20% {
-        background-color: lightgreen;
+    25% {
+        background-color: rgb(252, 252, 0);
     }
 
 
-    40% {
-        background-color: green;
+    50% {
+        background-color: rgb(252, 252, 0);
     }
 
-    60% {
-        background-color: lightgreen;
-    }
     100% {
-        background-color: palegreen;
+        background-color: rgb(255, 255, 181);
     }
 
 }
@@ -395,14 +402,11 @@ body.login-help {
 /* This adjust the height of nav bar*/
 
 .productpage {
-    background-color: darkolivegreen;
-
     Display: grid;
     width: 60%;
     height: 800px;
     grid-template-columns: 4fr 1fr 3fr;
     grid-template-rows: 1fr 4fr 1fr;
-    margin-top: 1%;
     margin-left: 20%;
     Padding: 30px;
 
@@ -412,6 +416,7 @@ body.login-help {
     align-self: center;
     justify-self: center;
     grid-area: 1/1/2/2;
+    color:black;
 }
 
 .productimg {
@@ -423,12 +428,14 @@ body.login-help {
     grid-area: 1/2/3/4;
     font-size: 20px;
     padding: 50px;
+    color:black;
 }
 
 .productprice {
     align-self: center;
     justify-self: center;
     grid-area: 3/2/4/3;
+    color:black;
 }
 
 .productscroll {
@@ -488,7 +495,7 @@ body.login-help {
     max-height: 500px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    background-color: rgb(254, 216, 177);
+    background-color: white;
     justify-content: space-evenly;
     align-content: space-evenly;
     padding: 10px;
@@ -512,13 +519,13 @@ body.login-help {
 }
 
 .accountbackground {
-    background-image: url("woodbar/redwoodnavbar.jpg");
+    background-image: url("background/alligator1.jpg");
     margin: auto;
     width: 70%;
 }
 
 .cart {
-    background-color: rgba(195, 195, 195, 0.9);
+    background-image: url("background/alligator1.jpg");
     width: 80%;
     margin: auto;
 }
@@ -531,7 +538,7 @@ body.login-help {
     border: solid black 1px;
     justify-items: center;
     align-items: center;
-    background-color: rgb(254, 216, 177);
+    background-image: url("background/alligator1.jpg");
 }
 
 .fullTrackrow {
@@ -542,7 +549,7 @@ body.login-help {
     border: solid black 1px;
     justify-items: center;
     align-items: center;
-    background-color: grey;
+    background-color: gray;
 }
 
 .nameinput{
@@ -576,18 +583,19 @@ body.login-help {
     border: solid black 1px;
     justify-items: center;
     align-items: center;
-    background-color: rgb(254, 216, 177);
+    background-image: url("background/alligator1.jpg");
 }
 
 .checkoutbtn {
     grid-column: 1/span 2;
     justify-items: center;
     align-items: center;
+
 }
 
 .ccgrid {
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     grid-template-columns: 1fr 1fr;
     width: 30%;
 }
