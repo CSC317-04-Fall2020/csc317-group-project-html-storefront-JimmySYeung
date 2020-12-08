@@ -17,17 +17,6 @@
             <label for="category"></label>
             <th scope="col">
                 <div class="dropdown">
-                    <button class="dropbtn">Themes</button>
-                    <div class="dropdown-content">
-                        <button type="button" onclick="bgchange1()">Spiral</button>
-                        <button type="button" onclick="bgchange2()">Alligator</button>
-                        <button type="button" onclick="bgchange3()">Water</button>
-                        <button type="button" onclick="bgchange4()">Sand</button>
-                    </div>
-                </div>
-            </th>
-            <th scope="col">
-                <div class="dropdown">
                     <button class="dropbtn">Select a category</button>
                     <div class="dropdown-content">
                         <a href="index.html">All</a>
@@ -85,26 +74,6 @@
             <a href="faq.html"><img src="woodbar/FAQ.jpg" class="wood">
     </div>
     <script>
-        function bgchange1() {
-            document.body.style.backgroundColor = "#f3f3f3";
-            document.body.style.backgroundImage = "url('background/spiralbook.jpg')";
-        }
-
-        function bgchange2() {
-            document.body.style.backgroundColor = "#f3f3f3";
-            document.body.style.backgroundImage = "url('background/alligator1.jpg')";
-        }
-
-        function bgchange3() {
-            document.body.style.backgroundColor = "#f3f3f3";
-            document.body.style.backgroundImage = "url('background/whiteleafwater.jpg')";
-        }
-
-        function bgchange4() {
-            document.body.style.backgroundColor = "#f3f3f3";
-            document.body.style.backgroundImage = "url('background/beachsand.jpg')";
-        }
-
         function infoOn() {
             document.getElementById("overlay-companyInfo").style.display = block;
         }

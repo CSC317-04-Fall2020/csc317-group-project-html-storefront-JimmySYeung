@@ -65,7 +65,7 @@
     border: none;
 }
 
-.dropdown-content a, .dropdown-content button{
+.dropdown-content a{
     background-color: whitesmoke;
     border: none;
     color: black;
@@ -73,17 +73,13 @@
     Display: block;
     
 }
-.dropdown-content button{
-    width: 84px;
-}
-
 .dropdown-content a{
     width: auto;
 }
 
 
 
-.dropdown-content a:hover, .dropdown-content button:hover{
+.dropdown-content a:hover{
     background-color: yellow;
 }
 
