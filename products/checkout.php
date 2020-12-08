@@ -1,6 +1,6 @@
 <?php
 require 'producttable.php';
-$total = 0;
+$total = "";
 $names = array();
 $quantities = array();
 $itemnumber = $_GET['total'];
@@ -18,6 +18,49 @@ if($result === TRUE){
                 $total += ($products["price"]*$quantities[$i]);
             }
 	    }
+    }
+} else {
+    for($i=0;$i<$itemnumber;$i++){
+        $price = 0;
+        switch ($names[$i]) {
+            case ('Chasing the American Dream'):
+                $price = 9.99;
+                break;
+            case ('Deadpool Pikachu'):
+                $price = 19.99;
+                break;
+            case ('Doggy Coin'):
+                $price = 4.99;
+                break;
+            case ('My Hero Academia vol. '):
+                $price = 9.99;
+                break;
+            case ('Introduction to Java Programming'):
+                $price = 29.99;
+                break;
+            case ('Introduction to Physical Anthropology'):
+                $price = 149.99;
+                break;
+            case ('Introduction to Sociology'):
+                $price = 49.99;
+                break;
+            case ('Izuku Midoriya Figure'):
+                $price = 19.99;
+                break;
+            case ('Ochaco Uraraka Figure'):
+                $price = 19.99;
+                break;
+            case ('Python Crash Course'):
+                $price = 14.99;
+                break;
+            case ('Web Design Playground'):
+                $price = 29.99;
+                break;
+            case ('Trusted Criminals'):
+                $price = 69.99;
+                break;
+        };
+        $total .= $price*$quantities[$i];
     }
 }
 ?>
@@ -48,7 +91,7 @@ if($result === TRUE){
                 <p class="checkouttext2">Card number</p>
                 <input class="checkoutinput2" type="number" id="cardnumber" name="cardnumber" onblur="checkccnum()">
 
-                <p class="checkouttext3">Expiration date and security code</p>
+                <p class="checkouttext3">Expiration date (month, year) and security code</p>
                 <div class="securitycode">
                     <select class="checkoutinput3" name="expmonth" id="expmonth" onblur="checkmonth()">
                         <option></option>

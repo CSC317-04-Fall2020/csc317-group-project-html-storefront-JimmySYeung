@@ -139,7 +139,7 @@
 
 function checkccnum(){
     var check = document.getElementById("cardnumber").value;
-    if (!check.match(/\d{13,19}/)){
+    if (!check.match(/\d{13,19}/)|| check.match(/\d{20}/) || check.match(/\D/)){
         document.getElementById("cardnumber").value = "";
         document.getElementById("cardnumber").style.border = "solid red 1px";
         return false;
@@ -160,7 +160,7 @@ function checkmonth(){
 
 function checkyear(){
     var check = document.getElementById("expyear").value;
-    if (!check.match(/\d{4}/)){
+    if (!check.match(/\d{4}/)|| check.match(/\d{5}/) || check.match(/\D/)){
         document.getElementById("expyear").value = "";
         document.getElementById("expyear").style.border = "solid red 1px";
         return false;
@@ -171,7 +171,7 @@ function checkyear(){
 
 function checksecurity(){
     var check = document.getElementById("securitycode").value;
-    if (!check.match(/\d{3,4}/)){
+    if (!check.match(/\d{3,4}/) || check.match(/\d{5}/) || check.match(/\D/)){
         document.getElementById("securitycode").value = "";
         document.getElementById("securitycode").style.border = "solid red 1px";
         return false;
@@ -182,20 +182,52 @@ function checksecurity(){
 
 function checkletters(id){
     var check = document.getElementById(id).value;
+    if (check.match(/[^a-zA-Z\-\' ]/) || check == ""){
+        document.getElementById(id).value = "";
+        document.getElementById(id).style.border = "solid red 1px";
+        return false;
+    }
+    document.getElementById(id).style.border = "";
+    return true;
 }
 
 function checkaddress(){
     var check = document.getElementById("address").value;
+    if (check.match(/[^a-zA-Z\-\' 0-9]/)){
+        document.getElementById("address").value = "";
+        document.getElementById("address").style.border = "solid red 1px";
+        return false;
+    }
+    document.getElementById("address").style.border = "";
+    return true;
 }
 
 function checkzip(){
     var check = document.getElementById("zip").value;
+    if (!check.match(/\d{5}/)|| check.match(/\d{6}/) || check.match(/\D/)){
+        document.getElementById("zip").value = "";
+        document.getElementById("zip").style.border = "solid red 1px";
+        return false;
+    }
+    document.getElementById("zip").style.border = "";
+    return true;
 }
 
 function checkphone(){
     var check = document.getElementById("phone").value;
+    if (check.match(/^([0-9]?(-)?[0-9]{3}(-)?[0-9]{3}(-)?[0-9]{4}(-)?)$/)){
+        document.getElementById("phone").style.border = "";
+        return true;
+    }
+    document.getElementById("phone").value = "";
+    document.getElementById("phone").style.border = "solid red 1px";
+    return false;
 }
 
 function pay(){
-    location.href="../index.html";
+    if(checkccnum() && checkmonth() && checkyear() && checksecurity() && 
+    checkletters('fname') && checkletters('lname')&& checkletters('city') && checkaddress()
+    && checkletters('state') && checkzip() && checkletters('country') && checkphone()){
+        location.href="../index.html";
+    }
 }
