@@ -12,9 +12,20 @@
 </head>
 
 <body class="storefront">
-    <table background="/toys/deadpoolpikachu.JPG" width="70%" height="100" align="center">
+    <table background="/background/alligator1.jpg" width="70%" height="100" align="center">
         <tr>
             <label for="category"></label>
+            <th scope="col">
+                <div class=" dropdown">
+                    <button class="dropbtn">Themes</button>
+                    <div class="dropdown-content">
+                        <button type="button" onclick="bgchange1()">Spiral</button>
+                        <button type="button" onclick="bgchange2()">Alligator</button>
+                        <button type="button" onclick="bgchange3()">Water</button>
+                        <button type="button" onclick="bgchange4()">Sand</button>
+                    </div>
+                </div>
+            </th>
             <th scope="col">
                 <div class="dropdown">
                     <button class="dropbtn">Select a category</button>
@@ -54,18 +65,9 @@
 
         </tr>
     </table>
-    <br>
-
-    <div class="accountintro" style="margin:auto; text-align: center;">
-        <td>
-            <h4>Credit Card Info</h4>
-        </td>
-    </div>
-    <br>
     <fieldset>
         <div class="creditcard">
             <form name="creditcard-form" id="creditcard-form" action="javascript:saveCreditCard()">
-                <br>
                 <div class="ccgrid">
                     <label for="name-on-card">Name on card</label>
                     <input type="text" name="fname" id="fname" />
@@ -81,6 +83,26 @@
     </fieldset>
 </body>
 <script>
+    function bgchange1() {
+        document.body.style.backgroundColor = "#f3f3f3";
+        document.body.style.backgroundImage = "url('/background/spiralbook.jpg')";
+    }
+
+    function bgchange2() {
+        document.body.style.backgroundColor = "#f3f3f3";
+        document.body.style.backgroundImage = "url('/background/alligator1.jpg')";
+    }
+
+    function bgchange3() {
+        document.body.style.backgroundColor = "#f3f3f3";
+        document.body.style.backgroundImage = "url('/background/whiteleafwater.jpg')";
+    }
+
+    function bgchange4() {
+        document.body.style.backgroundColor = "#f3f3f3";
+        document.body.style.backgroundImage = "url('/background/beachsand.jpg')";
+    }
+
     function infoOn() {
         document.getElementById("overlay-companyInfo").style.display = block;
     }
