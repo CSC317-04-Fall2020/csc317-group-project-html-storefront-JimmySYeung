@@ -176,7 +176,7 @@ body.storefront {
 }
 
 .products {
-    background-image: url("woodbar/redwoodnavbar.jpg");
+    background-image: url("background/alligator1.jpg");
     color: white;
 }
 
@@ -393,11 +393,14 @@ body.login-help {
 /* This adjust the height of nav bar*/
 
 .productpage {
+    background-color: darkolivegreen;
+
     Display: grid;
     width: 60%;
     height: 800px;
     grid-template-columns: 4fr 1fr 3fr;
     grid-template-rows: 1fr 4fr 1fr;
+    margin-top: 1%;
     margin-left: 20%;
     Padding: 30px;
 
