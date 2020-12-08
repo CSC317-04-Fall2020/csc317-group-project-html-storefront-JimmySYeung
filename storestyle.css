@@ -172,6 +172,7 @@
 }
 
 .faqinfobox {
+    border: solid black;
     background-color: gray;
     margin: auto;
     width: 90%;
