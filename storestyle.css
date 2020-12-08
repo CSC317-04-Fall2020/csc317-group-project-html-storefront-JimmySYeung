@@ -168,7 +168,6 @@
 }
 
 .faqinfobox {
-    border: solid black;
     background-image: url("background/alligator1.jpg");
     margin: auto;
     width: 90%;
@@ -414,10 +413,12 @@ body.login-help {
 }
 
 .producttitle {
+    background-color:whitesmoke;
     align-self: center;
     justify-self: center;
-    grid-area: 1/1/2/2;
+    grid-area: 1/1/1/4;
     color:black;
+    padding:10px;
 }
 
 .productimg {
@@ -426,16 +427,18 @@ body.login-help {
 }
 
 .productdescription {
-    grid-area: 1/2/3/4;
+    background-color:whitesmoke;
+    grid-area: 2/2/3/4;
     font-size: 20px;
-    padding: 50px;
+    padding: 20px;
     color:black;
+    height: 50%;
 }
 
 .productprice {
     align-self: center;
     justify-self: center;
-    grid-area: 3/2/4/3;
+    grid-area: 3/2/3/3;
     color:black;
 }
 
@@ -478,6 +481,7 @@ body.login-help {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-area: 3/3/3/3;
     width: 100%;
 }
 
