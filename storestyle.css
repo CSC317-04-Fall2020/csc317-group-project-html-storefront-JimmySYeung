@@ -597,6 +597,10 @@ body.login-help {
 .removeallbutton:hover{
     opacity:.8;
 }
+.removeallbutton:active {
+
+    transform: scale(.95);
+}
 
 .checkoutbtn {
     grid-column: 1/span 2;
@@ -608,7 +612,9 @@ body.login-help {
 }
 .checkoutbtn:hover{
     opacity: .8;
-
+}
+.checkoutbtn:active{
+    transform:scale(.95);
 }
 
 .ccgrid {
