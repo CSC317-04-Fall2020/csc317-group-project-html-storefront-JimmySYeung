@@ -9,6 +9,7 @@ window.addEventListener('load', () => {
     const city = sessionStorage.getItem('CITY');
     const state = sessionStorage.getItem('STATEW');
     const zip = sessionStorage.getItem('ZIP');
+    const username = sessionStorage.getItem('USERNAME');
 
     document.getElementById('result-fname').innerHTML = fname;
     document.getElementById('result-lname').innerHTML = lname;
@@ -17,6 +18,7 @@ window.addEventListener('load', () => {
     document.getElementById('result-city').innerHTML = city;
     document.getElementById('result-state').innerHTML = state;
     document.getElementById('result-zip').innerHTML = zip;
+    document.getElementById('result-username').innerHTML = username;
 
 
 })
