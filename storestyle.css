@@ -590,12 +590,20 @@ body.login-help {
     align-items: center;
     background-color: white;
 }
+.removeallbutton{
+    background: transparent;
+    border:none;
+}
+.removeallbutton:hover{
+    opacity:.8;
+}
 
 .checkoutbtn {
     grid-column: 1/span 2;
     justify-items: center;
     align-items: center;
     border:none;
+    background: transparent;
 
 }
 .checkoutbtn:hover{
