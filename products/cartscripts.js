@@ -158,7 +158,7 @@ function removeFromCart(name) {
     </div>\
     <h2>Quantity</h2>\
     <h2>Price</h2>\
-    <button type="button" onclick="removeAll()">Remove All</button>';
+    <button class="removeallbutton" type="button" onclick="removeAll()"><img src="../woodbar/removeall1.png"></button>';
 
     cartRow.innerHTML = cartContent;
     cart.append(cartRow);
