@@ -595,6 +595,11 @@ body.login-help {
     grid-column: 1/span 2;
     justify-items: center;
     align-items: center;
+    border:none;
+
+}
+.checkoutbtn:hover{
+    opacity: .8;
 
 }
 
