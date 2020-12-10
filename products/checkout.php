@@ -1,6 +1,6 @@
 <?php
 require 'producttable.php';
-$total = "";
+$total = 0;
 $names = array();
 $quantities = array();
 $itemnumber = $_GET['total'];
@@ -60,7 +60,7 @@ if($result === TRUE){
                 $price = 69.99;
                 break;
         };
-        $total .= $price*$quantities[$i];
+        $total += $price*$quantities[$i];
     }
 }
 ?>
