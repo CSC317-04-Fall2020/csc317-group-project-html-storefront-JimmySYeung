@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="../storestyle.css">
+
 </head>
 
 <body class="account">
@@ -29,18 +30,19 @@
 
                         </tr>
                         <tr>
+                            <script type="text/javascript" src="settings.js" ></script>
                             <td>
                                 <form action="loginnSecurity.html" method="POST">
-                                    <input type="fname" placeholder="First Name"><br><br>
-                                    <input type="lname" placeholder="Last Name"><br><br>
-                                    <input type="email" placeholder="Email Address">
+                                    <input type="text" id="fname" placeholder="First Name"><br><br>
+                                    <input type="text" id="lname" placeholder="Last Name"><br><br>
+                                    <input type="text" id="email" placeholder="Email Address">
                                     <br><br><br><br>
-                                    <label for"address">Address</label><br><br>
-                                    <input type="address" placeholder="Street Address"><br><br>
-                                    <input type="city" placeholder="City"><br><br>
-                                    <input type="state" placeholder="State"><br><br>
-                                    <input type="zip" placeholder="Zip Code"><br><br><br>
-                                    <input type="submit" value="Save">
+                                    Address</label><br><br>
+                                    <input type="text" id="address" placeholder="Street Address"><br><br>
+                                    <input type="text" id="city" placeholder="City"><br><br>
+                                    <input type="text" id="state" placeholder="State"><br><br>
+                                    <input type="zip" id="zip" placeholder="Zip Code"><br><br><br>
+                                    <input type="submit" value="Save" onclick="handleSubmit()"/>
                                 </form>
 
                             </td>
