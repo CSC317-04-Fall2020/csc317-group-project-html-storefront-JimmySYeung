@@ -6,6 +6,7 @@ function handleSubmit () {
     const city = document.getElementById('city').value;
     const state = document.getElementById('state').value;
     const zip = document.getElementById('zip').value;
+    const username = document.getElementById('username').value;
 
 
 
@@ -16,6 +17,7 @@ function handleSubmit () {
     sessionStorage.setItem("CITY", city);
     sessionStorage.setItem("STATE", state);
     sessionStorage.setItem("ZIP", zip);
+    sessionStorage.setItem("USERNAME",username);
 
 
     return;
