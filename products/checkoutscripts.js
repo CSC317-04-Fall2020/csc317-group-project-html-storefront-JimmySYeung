@@ -142,6 +142,7 @@ function checkccnum(){
     if (!check.match(/\d{13,19}/)|| check.match(/\d{20}/) || check.match(/\D/)){
         document.getElementById("cardnumber").value = "";
         document.getElementById("cardnumber").style.border = "solid red 1px";
+        alert("Card number must be 13-19 digits!");
         return false;
     }
     document.getElementById("cardnumber").style.border = "";
@@ -152,6 +153,7 @@ function checkmonth(){
     var check = document.getElementById("expmonth").value;
     if(check == ""){
         document.getElementById("expmonth").style.border = "solid red 1px";
+        alert("Month of expiration date is blank!");
         return false;
     }
     document.getElementById("expmonth").style.border = "";
@@ -163,6 +165,7 @@ function checkyear(){
     if (!check.match(/\d{4}/)|| check.match(/\d{5}/) || check.match(/\D/)){
         document.getElementById("expyear").value = "";
         document.getElementById("expyear").style.border = "solid red 1px";
+        alert("Year of expiration data must be 4 digits!");
         return false;
     }
     document.getElementById("expyear").style.border = "";
@@ -174,6 +177,7 @@ function checksecurity(){
     if (!check.match(/\d{3,4}/) || check.match(/\d{5}/) || check.match(/\D/)){
         document.getElementById("securitycode").value = "";
         document.getElementById("securitycode").style.border = "solid red 1px";
+        alert("Security code must be 3-4 digits!");
         return false;
     }
     document.getElementById("securitycode").style.border = "";
@@ -182,9 +186,16 @@ function checksecurity(){
 
 function checkletters(id){
     var check = document.getElementById(id).value;
-    if (check.match(/[^a-zA-Z\-\' ]/) || check == ""){
+    if (check.match(/[^a-zA-Z\-\' ]/)){
         document.getElementById(id).value = "";
         document.getElementById(id).style.border = "solid red 1px";
+        alert(document.getElementById(id).placeholder+" has invalid characters!");
+        return false;
+    }
+    if (check==""){
+        document.getElementById(id).value = "";
+        document.getElementById(id).style.border = "solid red 1px";
+        alert(document.getElementById(id).placeholder+" is blank!");
         return false;
     }
     document.getElementById(id).style.border = "";
@@ -196,6 +207,13 @@ function checkaddress(){
     if (check.match(/[^a-zA-Z\-\' 0-9]/)){
         document.getElementById("address").value = "";
         document.getElementById("address").style.border = "solid red 1px";
+        alert("Billing address has invalid characters!");
+        return false;
+    }
+    if (check==""){
+        document.getElementById("address").value = "";
+        document.getElementById("address").style.border = "solid red 1px";
+        alert("Billing address is blank!");
         return false;
     }
     document.getElementById("address").style.border = "";
@@ -207,6 +225,7 @@ function checkzip(){
     if (!check.match(/\d{5}/)|| check.match(/\d{6}/) || check.match(/\D/)){
         document.getElementById("zip").value = "";
         document.getElementById("zip").style.border = "solid red 1px";
+        alert("Zip code must be 5 digits!");
         return false;
     }
     document.getElementById("zip").style.border = "";
@@ -215,12 +234,13 @@ function checkzip(){
 
 function checkphone(){
     var check = document.getElementById("phone").value;
-    if (check.match(/^([0-9]?(-)?[0-9]{3}(-)?[0-9]{3}(-)?[0-9]{4}(-)?)$/)){
+    if (check.match(/^([0-9]?(-)?[0-9]{3}(-)?[0-9]{3}(-)?[0-9]{4})$/)){
         document.getElementById("phone").style.border = "";
         return true;
     }
     document.getElementById("phone").value = "";
     document.getElementById("phone").style.border = "solid red 1px";
+    alert("That is not a valid phone number!");
     return false;
 }
 

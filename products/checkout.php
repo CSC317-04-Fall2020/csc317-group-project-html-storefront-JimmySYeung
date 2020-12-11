@@ -19,7 +19,7 @@ if($result === TRUE){
             }
 	    }
     }
-} else {
+} else { //If unable to connect to database, use switch statement for total price
     for($i=0;$i<$itemnumber;$i++){
         $price = 0;
         switch ($names[$i]) {
@@ -32,7 +32,7 @@ if($result === TRUE){
             case ('Doggy Coin'):
                 $price = 4.99;
                 break;
-            case ('My Hero Academia vol. '):
+            case ('My Hero Academia vol. 1'):
                 $price = 9.99;
                 break;
             case ('Introduction to Java Programming'):
@@ -89,7 +89,7 @@ if($result === TRUE){
                 </select>
 
                 <p class="checkouttext2">Card number</p>
-                <input class="checkoutinput2" type="number" id="cardnumber" name="cardnumber" onblur="checkccnum()">
+                <input class="checkoutinput2" type="number" id="cardnumber" name="cardnumber" placeholder="Card number" onblur="checkccnum()">
 
                 <p class="checkouttext3">Expiration date (month, year) and security code</p>
                 <div class="securitycode">
@@ -108,8 +108,8 @@ if($result === TRUE){
                         <option value="11">11</option>
                         <option value="12">12</option>
                     </select>
-                    <input class="checkoutinput4" type="number" name="expyear" id="expyear" min="2020" onblur="checkyear()">
-                    <input class="checkoutinput5" type="text" id="securitycode" onblur="checksecurity()">
+                    <input class="checkoutinput4" type="number" name="expyear" id="expyear" placeholder="Year" min="2020" onblur="checkyear()">
+                    <input class="checkoutinput5" type="text" id="securitycode" placeholder="Code" onblur="checksecurity()">
                 </div>
             </div>
         </fieldset>
@@ -118,28 +118,28 @@ if($result === TRUE){
             <legend class="checkouttitle">Billing Information</legend>
             <div class="billing">
                 <p class="checkouttext4">First name</p>
-                <input class="checkoutinput6" type="text" name="fname" id="fname" onblur="checkletters('fname')">
+                <input class="checkoutinput6" type="text" name="fname" id="fname" placeholder="First name" onblur="checkletters('fname')">
 
                 <p class="checkouttext5">Last name</p>
-                <input class="checkoutinput7" type="text" name="lname" id="lname" onblur="checkletters('lname')">
+                <input class="checkoutinput7" type="text" name="lname" id="lname" placeholder="Last name" onblur="checkletters('lname')">
 
                 <p class="checkouttext6">City</p>
-                <input class="checkoutinput8" type="text" name="city" id="city" onblur="checkletters('city')">
+                <input class="checkoutinput8" type="text" name="city" id="city" placeholder="City" onblur="checkletters('city')">
 
                 <p class="checkouttext7">Billing address</p>
-                <input class="checkoutinput9" type="text" name="address" id="address" onblur="checkaddress()">
+                <input class="checkoutinput9" type="text" name="address" id="address" placeholder="Billing address" onblur="checkaddress()">
 
                 <p class="checkouttext8">State/Province</p>
-                <input class="checkoutinput10" type="text" name="state" id="state" onblur="checkletters('state')">
+                <input class="checkoutinput10" type="text" name="state" id="state" placeholder="State" onblur="checkletters('state')">
 
                 <p class="checkouttext9">Zip or postal code</p>
-                <input class="checkoutinput11" type="number" name="zip" id="zip" onblur="checkzip()">
+                <input class="checkoutinput11" type="number" name="zip" id="zip" placeholder="Zip code" onblur="checkzip()">
 
                 <p class="checkouttext10">Country</p>
-                <input class="checkoutinput12" type="text" name="country" id="country" onblur="checkletters('country')">
+                <input class="checkoutinput12" type="text" name="country" id="country" placeholder="Country" onblur="checkletters('country')">
 
                 <p class="checkouttext11">Phone number</p>
-                <input class="checkoutinput13" type="text" name="phone" id="phone" onblur="checkphone()">
+                <input class="checkoutinput13" type="text" name="phone" id="phone" placeholder="Phone number" onblur="checkphone()">
             </div>
         </fieldset>
     </form>
