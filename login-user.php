@@ -15,7 +15,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-     <table background="toys/deadpoolpikachu.JPG" width="70%" height="100" align="center">
+     <table background="background/alligator1.jpg" width="70%" height="100" align="center">
 
         <tr>
 
@@ -37,7 +37,7 @@
             </th>
             <th scope="col">
                 <div class="dropdown">
-                    <button class="dropbtn">Select a category</button>
+                    <img src="woodbar/categories1.png">
                     <div class="dropdown-content">
                         <a href="index.html">All</a>
                         <a href="textbooks.html">Textbooks</a>
@@ -48,7 +48,7 @@
             </th>
             <div class="woodbar">
 
-                <th scope="col"><a href="index.html"><img src="woodbar/home.jpg" class="wood"></th>
+                <th scope="col"><a href="index.html"><img src="woodbar/home1.png" class="wood"></th>
                 <div class="wrap">
                     <th scope="col">
                         <div class="input-group">
@@ -72,8 +72,8 @@
             </div>
 
             <div class="woodbar">
-                <th scope="col"><a href="account.html"><img src="woodbar/account.jpg" class="wood"></th>
-                <th scope="col"><a href="products/empty.html"><img src="woodbar/cart.jpg" class="wood"></th>
+                <th scope="col"><a href="account.html"><img src="woodbar/account1.png" class="wood"></th>
+                <th scope="col"><a href="products/empty.html"><img src="woodbar/cart1.png" class="wood"></th>
             </div>
             </div>
 
@@ -141,8 +141,8 @@
 
     </div>
     <div class="woodalign">
-        <a href="companyinfo.html"><img src="woodbar/companyinfo.jpg" class="wood">
-        <a href="faq.html"><img src="woodbar/FAQ.jpg" class="wood">
+        <a href="companyinfo.html"><img src="woodbar/companyinfo1.png" class="wood">
+        <a href="faq.html"><img src="woodbar/FAQ1.png" class="wood">
     </div>
 </body>
 </html>
